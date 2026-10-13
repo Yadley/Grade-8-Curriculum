@@ -147,12 +147,15 @@ export function Corpus() {
           </div>
         )}
 
-        <p className="fine shelf-note">
-          The covers are original visual labels, not publisher covers or reproductions of the
-          literary texts. Displayed years follow the thesis inventory; verify publication details
-          against the authorized edition and bibliography before teaching, especially where the
-          thesis draft gives conflicting dates.
-        </p>
+        <aside className="fine shelf-note" aria-label="Publication and edition note">
+          <strong>About these covers and dates</strong>
+          <span>
+            Each cover is an original visual label created for this hub, not a publisher cover or
+            reproduction of the literary work. Years shown follow the thesis inventory. Before
+            teaching, confirm each title, text version, and publication date against the authorized
+            edition and bibliography—particularly where the thesis draft records conflicting dates.
+          </span>
+        </aside>
       </div>
 
       <Dossier work={open} onClose={() => setOpenId(null)} />
