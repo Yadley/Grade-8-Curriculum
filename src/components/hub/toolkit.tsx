@@ -15,7 +15,7 @@ export function Toolkit() {
       <div className="wrap">
         <div className="block-head">
           <p className="kicker">Pedagogical toolkits</p>
-          <h2 id="toolkit-title" className="section-title">Three models. Six moves. One period.</h2>
+          <h2 id="toolkit-title" className="section-title">Six teaching approaches. One adaptable lesson sequence.</h2>
           <p className="lede">Carter and Long named three models in 1991: cultural, language, and personal growth. The clock below is a suggested classroom sequence that draws on those models. It is not a separate assignment, quiz, or fourth model.</p>
         </div>
         <aside className="clock-guide" aria-labelledby="clock-guide-title">
@@ -26,7 +26,7 @@ export function Toolkit() {
             <p className="clock-guide-key"><b>Each stage answers:</b> What the teacher does · What students do · Why it helps</p>
           </div>
         </aside>
-        <div className="models">
+        <div className="clock-guide" role="note" aria-label="How to use this lesson clock">\n          <span className="clock-guide-icon" aria-hidden="true">i</span>\n          <div><h3>How should a teacher use this?</h3><p>Choose one of the ten literary pieces, prepare an authorized copy, then use the clock as a planning aid. Click a stage to see the teacher move and why it helps. You do not need to answer the prompts yourself; they are suggestions for a real classroom lesson.</p><p className="clock-guide-key"><b>Why it is here:</b> to turn the thesis topics into practical examples of how a teacher might introduce, read, discuss, and check understanding of a literary text.</p></div>\n        </div>\n        <div className="models">
           {models.map((model) => <article key={model.name} className="model"><p className="kicker">{model.cite}</p><h3>{model.name}</h3><p>{model.body}</p></article>)}
         </div>
         <div className="clock-progress" aria-label="Lesson sequence overview">
@@ -49,7 +49,7 @@ export function Toolkit() {
           })}
         </div>
         <div className="organizer">
-          <div><p className="kicker">Graphic organizer · worked example</p><h3 className="subhead">Hitting Budapest, beside us</h3></div>
+          <div><p className="kicker">Graphic organizer · worked example</p><h3 className="subhead">From text evidence to a careful connection</h3></div>
           {organizer.map((row) => <div key={row.text} className="pair"><p><span>In the text</span>{row.text}</p><p><span>Near us</span>{row.near}</p></div>)}
           <p className="fine">Each dossier carries its own bridge. This one is filled in so a teacher can see the comparison before asking students to make one.</p>
         </div>
