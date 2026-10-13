@@ -7,7 +7,7 @@ export function Hero() {
       <div className="hero-scene" aria-hidden="true">
         <img src="/images/african-youth.jpg" alt="" width={1600} height={1067} />
         <video className={videoReady ? "hero-video is-ready" : "hero-video"} autoPlay muted loop playsInline preload="metadata" poster="/images/african-youth.jpg" onCanPlay={() => setVideoReady(true)} onError={(event) => { event.currentTarget.style.display = "none"; }} tabIndex={-1}>
-          <source src="/videos/african-literature-hero.mp4" type="video/mp4" />
+          <source src="/images/african-literature-hero.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="wrap hero-content">
