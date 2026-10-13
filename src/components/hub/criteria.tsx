@@ -7,7 +7,7 @@ export function Criteria() {
         <div className="block-head">
           <p className="kicker">Selection criteria</p>
           <h2 id="criteria-title" className="section-title">
-            Why these ten, and not a single famous name.
+            A defined corpus, with room for careful reading.
           </h2>
           <p className="lede">
             Grade 8 English asks learners to evaluate Afro-Asian poetry and prose for meaning,
@@ -30,7 +30,7 @@ export function Criteria() {
             Ten texts cannot represent a continent. They can stop a syllabus from pretending one
             text is enough.
           </q>
-          <p>Selection principle for this hub. West 4 · Southern 4 · East 2. The imbalance is stated, not hidden.</p>
+          <p>Selection principle: teach each work in its own context, and treat the corpus as a bounded study inventory.</p>
         </div>
       </div>
     </section>
