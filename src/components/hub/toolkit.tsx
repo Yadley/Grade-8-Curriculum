@@ -1,8 +1,18 @@
 import { useState } from "react";
 import { clock, models, organizer } from "@/data/hub";
 
+function minutes(value: string) {
+  return Number.parseInt(value, 10) || 0;
+}
+
 export function Toolkit() {
   const [openId, setOpenId] = useState(clock[0].id);
+  const activeIndex = Math.max(0, clock.findIndex((step) => step.id === openId));
+  const activeStep = clock[activeIndex] ?? clock[0];
+  const totalMinutes = clock.reduce((total, step) => total + minutes(step.mins), 0);
+  const elapsedMinutes = clock
+    .slice(0, activeIndex + 1)
+    .reduce((total, step) => total + minutes(step.mins), 0);
 
   return (
     <section className="block" id="toolkits" aria-labelledby="toolkit-title">
@@ -27,9 +37,34 @@ export function Toolkit() {
             </article>
           ))}
         </div>
-        <div className="clock">
-          {clock.map((step) => {
+        <div className="clock-progress" aria-label="Lesson sequence progress">
+          <div className="clock-progress-top">
+            <strong>{activeStep.title}</strong>
+            <span>
+              Move {activeIndex + 1} of {clock.length} · {elapsedMinutes} of {totalMinutes} min
+            </span>
+          </div>
+          <div
+            className="clock-progress-track"
+            role="progressbar"
+            aria-label="Selected move's position in the lesson"
+            aria-valuemin={0}
+            aria-valuemax={totalMinutes}
+            aria-valuenow={elapsedMinutes}
+            aria-valuetext={`${elapsedMinutes} of ${totalMinutes} minutes through the lesson`}
+          >
+            <div
+              className="clock-progress-fill"
+              style={{ width: `${(elapsedMinutes / totalMinutes) * 100}%` }}
+            />
+          </div>
+        </div>
+        <div className="clock" aria-label="Select a lesson move">
+          {clock.map((step, index) => {
             const open = openId === step.id;
+            const startMinute = clock
+              .slice(0, index)
+              .reduce((total, item) => total + minutes(item.mins), 0);
             return (
               <button
                 key={step.id}
@@ -42,7 +77,7 @@ export function Toolkit() {
                   <b>{step.title}</b>
                   <span className="mins">{step.mins}</span>
                 </span>
-                <span className="model-tag">{step.model}</span>
+                <span className="model-tag">{step.model} · {startMinute}–{startMinute + minutes(step.mins)} min</span>
                 {open ? <p>{step.body}</p> : null}
               </button>
             );
