@@ -62,9 +62,7 @@ export function Corpus() {
             Ten literary pieces. Explore the corpus.
           </h2>
           <p className="lede">
-            Poetry 5, short stories 2, a critical essay, a novel excerpt, and one work of
-            speculative fiction. Tap a cover for the dossier: context, words, a bridge, and three
-            questions.
+            Five poems, two short stories, one critical essay, and two speculative fiction works, as listed in the thesis inventory. Open a dossier for context, vocabulary, a classroom bridge, and discussion prompts.
           </p>
         </div>
         <div className="toolbar">
@@ -117,8 +115,7 @@ export function Corpus() {
           </div>
         )}
         <p className="fine shelf-note">
-          Original covers made for this shelf, so the page can show the books without copying a
-          publisher’s jacket. The literary text is still the copy your school is allowed to read.
+          The covers are original visual labels, not publisher covers or reproductions of the literary texts. Displayed years follow the thesis inventory; verify publication details against the authorized edition and bibliography before teaching, especially where the thesis draft gives conflicting dates.
         </p>
       </div>
       <Dossier work={open} onClose={() => setOpenId(null)} />
