@@ -4,13 +4,14 @@ const statTargets = [10, 4, 50, 6];
 
 export function Hero() {
   const [videoReady, setVideoReady] = useState(false);
-  const [counts, setCounts] = useState([0, 0, 0, 0]);
+  const [counts, setCounts] = useState(statTargets);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setCounts(statTargets);
       return;
     }
+    setCounts([0, 0, 0, 0]);
     const node = document.querySelector(".hero-cinematic .stats");
     if (!node) {
       setCounts(statTargets);
