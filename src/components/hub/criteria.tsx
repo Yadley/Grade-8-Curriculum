@@ -4,14 +4,22 @@ export function Criteria() {
   return (
     <section className="block" id="criteria" aria-labelledby="criteria-title">
       <div className="wrap">
-        <div className="block-head">
-          <p className="kicker">Selection criteria</p>
-          <h2 id="criteria-title" className="section-title">
-            A defined corpus, with room for careful reading.
-          </h2>
-          <p className="lede">
-            This ten-piece inventory follows the thesis submitted for the MAEd in Language and Literature. It is a proposed supplementary resource for teachers to consider alongside the applicable curriculum guide, authorized texts, and local instructional requirements.
-          </p>
+        <div className="criteria-intro">
+          <div className="criteria-intro-copy">
+            <div className="block-head">
+              <p className="kicker">Selection criteria</p>
+              <h2 id="criteria-title" className="section-title">
+                A defined corpus, with room for careful reading.
+              </h2>
+            </div>
+            <p className="criteria-greeting">Hi! My name is <strong>Tarisai Tara Mabuto.</strong></p>
+            <p>I developed this curated ten-piece African literary inventory as part of my master’s thesis for the degree of Master of Arts in Education (MAEd) in Language and Literature at Mariano Marcos State University.</p>
+            <p>Designed as an open-access supplementary resource, this hub provides secondary educators with award-winning contemporary poetry, prose, and speculative texts to enrich classroom instruction. These materials are intended to serve as practical pedagogical companions—to be explored alongside the DepEd Revised K to 10 English Curriculum Guide, authorized school modules, and your local division instructional priorities.</p>
+          </div>
+          <figure className="criteria-portrait">
+            <img src="/images/Tara.jpg" alt="Tarisai Tara Mabuto, researcher and creator of the African Literature Hub" loading="lazy" />
+            <figcaption>Tarisai Tara Mabuto · MAEd Language and Literature</figcaption>
+          </figure>
         </div>
         <div className="pillars">
           {pillars.map((pillar) => (

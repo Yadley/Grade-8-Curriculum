@@ -18,7 +18,7 @@ export function Header() {
       <div className="rail" />
       <div className="wrap header-bar">
         <a className="brand" href="#top">
-          <span className="mark" aria-hidden="true">A</span>
+          <span className="mark mark-logo"><img src="/images/mmsu-logo.png" alt="Mariano Marcos State University logo" /></span>
           <span><span className="brand-name">Literature Hub</span><span className="brand-sub">Grade 8 English</span></span>
         </a>
         <nav className="nav-desktop" aria-label="Page">
