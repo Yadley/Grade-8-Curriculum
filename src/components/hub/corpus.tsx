@@ -150,10 +150,11 @@ export function Corpus() {
         <aside className="fine shelf-note" aria-label="Publication and edition note">
           <strong>About these covers and dates</strong>
           <span>
-            Each cover is an original visual label created for this hub, not a publisher cover or
-            reproduction of the literary work. Years shown follow the thesis inventory. Before
-            teaching, confirm each title, text version, and publication date against the authorized
-            edition and bibliography—particularly where the thesis draft records conflicting dates.
+            The cards use a mix of original visual labels and supplied book or collection-cover
+            imagery; none reproduces the literary text itself. Years shown follow the thesis
+            inventory. Before teaching, confirm each title, text version, and publication date
+            against the authorized edition and bibliography—particularly where the thesis draft
+            records conflicting dates.
           </span>
         </aside>
       </div>
