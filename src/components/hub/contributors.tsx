@@ -137,39 +137,12 @@ export function Contributors() {
               <div
                 className={`contributor-visual-frame ${person.isInstitution ? "institution-visual" : ""}`}
                 aria-label={person.name + (person.isInstitution ? " seal" : " portrait")}
-                style={{
-                  height: "220px",
-                  overflow: "hidden",
-                  position: "relative",
-                  display: person.isInstitution ? "grid" : "block",
-                  placeItems: person.isInstitution ? "center" : undefined,
-                }}
               >
-                <span className="contributor-initials" aria-hidden="true">
-                  {person.initials}
-                </span>
-
                 <img
                   src={person.image}
                   alt={person.isInstitution ? "Official seal of " + person.name : "Portrait of " + person.name}
                   loading="lazy"
                   className={person.isInstitution ? "institution-seal-img" : "person-portrait-img"}
-                  style={
-                    person.isInstitution
-                      ? {
-                          width: "125px",
-                          height: "125px",
-                          objectFit: "contain",
-                          display: "block",
-                        }
-                      : {
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          objectPosition: "center 25%",
-                          display: "block",
-                        }
-                  }
                   onError={(event) => {
                     event.currentTarget.style.display = "none";
                   }}

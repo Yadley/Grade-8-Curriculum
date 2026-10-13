@@ -104,21 +104,42 @@ export function Toolkit() {
       </div>
 
       <div className="wrap">
-        <div className="block-head">
-          <div className="kicker-group">
-            <span className="kicker-shape" aria-hidden="true">
-              <img src="/images/Shapes/African Shape (3).svg" alt="" />
-            </span>
-            <p className="kicker">Pedagogical Toolkits</p>
+        <div className="toolkit-hero-head">
+          <div className="block-head">
+            <div className="kicker-group">
+              <span className="kicker-shape" aria-hidden="true">
+                <AfroSemiCircle color="#E0533C" size={26} rotation={180} />
+              </span>
+              <p className="kicker">Pedagogical Toolkits</p>
+            </div>
+            <h2 id="toolkit-title" className="section-title">
+              Six Teaching Approaches. One Adaptable Lesson Sequence.
+            </h2>
+            <p className="lede">
+              Carter and Long established three foundational models in 1991: cultural, language, and
+              personal growth. The interactive sequence below operationalizes these through six
+              concrete teaching moves designed for 50-minute secondary periods.
+            </p>
           </div>
-          <h2 id="toolkit-title" className="section-title">
-            Six Teaching Approaches. One Adaptable Lesson Sequence.
-          </h2>
-          <p className="lede">
-            Carter and Long established three foundational models in 1991: cultural, language, and
-            personal growth. The interactive sequence below operationalizes these through six
-            concrete teaching moves designed for 50-minute secondary periods.
-          </p>
+
+          {/* Editorial Classroom Hero Visual Card */}
+          <div className="toolkit-hero-visual-card" aria-label="Classroom pedagogical demonstration">
+            <div className="toolkit-hero-img-wrap">
+              <img
+                src="/images/Filipino Teacher (2).jpg"
+                alt="Filipino secondary English teacher facilitating an active literary reading session"
+                className="toolkit-hero-img"
+              />
+              <div className="toolkit-hero-badge" aria-hidden="true">
+                <AfroTriangle color="#E0533C" size={16} rotation={15} />
+                <span>Classroom In Practice</span>
+              </div>
+            </div>
+            <div className="toolkit-hero-caption">
+              <strong>DepEd English 8 · Secondary Period Architecture</strong>
+              <p>Translating literary theory into adaptable 50-minute secondary lesson sequences.</p>
+            </div>
+          </div>
         </div>
 
         {/* Informative Guidance Aside */}

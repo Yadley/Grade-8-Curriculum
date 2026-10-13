@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { pillars } from "@/data/hub";
+import { AfroSemiCircle, AfroTriangle } from "@/components/hub/afro-shapes";
 
 const pillarShapes = [
   {
@@ -45,7 +46,7 @@ export function Criteria() {
             <div className="block-head">
               <div className="kicker-group">
                 <span className="kicker-shape" aria-hidden="true">
-                  <img src="/images/Shapes/African Shape (1).svg" alt="" />
+                  <AfroSemiCircle color="#E0533C" size={24} rotation={180} />
                 </span>
                 <p className="kicker">Selection Criteria</p>
               </div>
@@ -96,7 +97,7 @@ export function Criteria() {
 
             {/* Decorative corner geometric accent */}
             <div className="africa-portrait-badge" aria-hidden="true">
-              <img src="/images/Shapes/African Shape (2).svg" alt="" className="badge-shape" />
+              <AfroSemiCircle color="#F2C94C" size={16} rotation={180} />
               <span>Curator</span>
             </div>
 

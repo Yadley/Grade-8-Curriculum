@@ -583,6 +583,18 @@
 .lightbox-actions {
   display: flex; gap: 0.8rem; flex-wrap: wrap;
 }
+.lightbox-actions .btn-ghost,
+.canvas-lightbox-card .btn-ghost {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+.lightbox-actions .btn-ghost:hover,
+.canvas-lightbox-card .btn-ghost:hover {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+}
 
 @media (max-width: 740px) {
   .canvas-lightbox-card {
@@ -660,12 +672,13 @@
   margin: 0 0 1rem;
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 1.1rem + .7vw, 1.85rem);
-  line-height: 1.22;
+  line-height: 1.24;
   letter-spacing: -.02em;
   color: var(--color-forest);
 }
 .criteria-greeting strong {
-  color: var(--color-jade);
+  color: var(--color-forest);
+  font-weight: 700;
 }
 
 .criteria-intro-copy > p:not(.criteria-greeting) {
@@ -676,25 +689,31 @@
 }
 
 .criteria-highlights {
-  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  display: flex; flex-wrap: wrap; gap: 0.65rem;
   margin-top: 1.6rem;
 }
 
 .highlight-pill {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.4rem 0.85rem;
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.45rem 0.95rem;
   border-radius: 999px;
-  background: var(--color-mist);
-  border: 1px solid color-mix(in srgb, var(--color-jade) 20%, transparent);
-  font-family: var(--font-kicker);
-  font-size: 0.74rem; font-weight: 700;
+  background: var(--color-canvas);
+  border: 1px solid color-mix(in srgb, var(--color-forest) 16%, transparent);
+  font-family: var(--font-body);
+  font-size: 0.82rem; font-weight: 600;
   color: var(--color-forest);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 8px rgb(18 63 43 / 4%);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+.highlight-pill:hover {
+  border-color: color-mix(in srgb, var(--color-forest) 32%, transparent);
+  box-shadow: 0 4px 12px rgb(18 63 43 / 8%);
 }
 .highlight-dot {
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--color-coral);
+  background: var(--color-forest);
 }
 
 /* ── Tara's Portrait Masked with Africa.svg ── */
@@ -784,10 +803,10 @@
   color: var(--color-forest);
 }
 .africa-portrait-caption span {
-  font-family: var(--font-kicker);
-  font-size: 0.78rem; font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.82rem; font-weight: 500;
   color: var(--color-muted);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
 }
 
 /* ── 5 Pedagogical Pillars Grid with African Shapes ── */
@@ -1089,6 +1108,99 @@
 .shape-bottom-right { bottom: -20px; right: 1rem; }
 
 /* ── TOOLKIT: Enhanced Pedagogical Experience ── */
+.toolkit-hero-head {
+  display: grid;
+  gap: clamp(1.8rem, 4vw, 3.5rem);
+  align-items: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+@media (min-width: 900px) {
+  .toolkit-hero-head {
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.95fr);
+  }
+}
+
+.toolkit-hero-head .block-head {
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.toolkit-hero-visual-card {
+  position: relative;
+  background: var(--color-canvas);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgb(18 63 43 / 8%);
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 350ms ease;
+}
+
+.toolkit-hero-visual-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgb(18 63 43 / 14%);
+}
+
+.toolkit-hero-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: var(--color-forest);
+}
+
+.toolkit-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 550ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toolkit-hero-visual-card:hover .toolkit-hero-img {
+  transform: scale(1.05);
+}
+
+.toolkit-hero-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(18, 63, 43, 0.88);
+  backdrop-filter: blur(6px);
+  color: var(--color-sun);
+  font-family: var(--font-kicker);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(242, 201, 76, 0.4);
+}
+
+.toolkit-hero-caption {
+  padding: 1rem 1.25rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.toolkit-hero-caption strong {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  color: var(--color-forest);
+  line-height: 1.3;
+}
+
+.toolkit-hero-caption p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
 .clock-guide-enhanced {
   display: flex;
   gap: 1.25rem;
@@ -1903,9 +2015,11 @@
 
 .organizer-footer-fine {
   margin: 0;
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   color: var(--color-muted);
-  text-align: center;
+  text-align: left;
+  max-width: 68ch;
+  line-height: 1.6;
 }
 
 /* ── CONTRIBUTORS: Balanced 6-Card Grid (3 × 2) ── */
@@ -2674,12 +2788,17 @@
   .criteria-highlights .highlight-pill > span:last-child { white-space: normal; }
 }
 
-/* Keep the editorial statement confident and intentionally composed. */
+/* Keep the editorial statement confident and intentionally composed on strictly 2 lines. */
 .africa-canvas .canvas-title,
 .africa-canvas h2,
 .africa-canvas .africa-canvas-title {
-  max-width: 13ch;
-  text-wrap: balance;
+  max-width: 24ch !important;
+  line-height: 1.14;
+}
+.africa-canvas .africa-canvas-title .title-row-one,
+.africa-canvas .africa-canvas-title .title-row-two {
+  display: block;
+  white-space: nowrap;
 }
 .africa-canvas .canvas-title em,
 .africa-canvas h2 em,
@@ -2794,26 +2913,46 @@
 }
 .contributor-card-v2 .contributor-visual-frame {
   width: 100%;
-  height: auto !important;
-  aspect-ratio: 4 / 3;
-  min-height: 0;
+  aspect-ratio: 4 / 3.4;
+  height: 250px;
+  min-height: 240px;
   overflow: hidden;
-  background: #e9e4d8;
+  position: relative;
+  background: var(--color-forest);
   border-radius: 0 !important;
 }
 .contributor-card-v2 .person-portrait-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  padding: .35rem;
-  background: #e9e4d8;
+  object-fit: cover !important;
+  object-position: center 20% !important;
+  padding: 0 !important;
+  display: block;
+  background: transparent !important;
+  transform: scale(1);
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1), filter 500ms ease;
+}
+.contributor-card-v2:hover .person-portrait-img {
+  transform: scale(1.08) !important;
+}
+.contributor-card-v2 .institution-visual {
+  background: radial-gradient(circle at 50% 50%, #1c523a, #123f2b 75%, #081d13) !important;
+  display: grid !important;
+  place-items: center !important;
 }
 .contributor-card-v2 .institution-seal-img {
-  max-width: 68% !important;
-  max-height: 68% !important;
+  width: 130px !important;
+  height: 130px !important;
+  max-width: 130px !important;
+  max-height: 130px !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
 }
-.contributor-card-v2 .contributor-initials { z-index: 0; opacity: .18; }
+.contributor-card-v2:hover .institution-seal-img {
+  transform: scale(1.08) rotate(3deg) !important;
+}
+.contributor-card-v2 .contributor-initials { display: none !important; }
 .contributor-card-v2 .person-portrait-img,
 .contributor-card-v2 .institution-seal-img { position: relative; z-index: 1; }
 .contributor-card-v2 .contributor-photo-tag {

@@ -188,8 +188,9 @@
   font-size: clamp(1.25rem, 1rem + .65vw, 1.7rem);
   line-height: 1.22;
   letter-spacing: -.02em;
+  color: var(--color-forest);
 }
-.criteria-greeting strong { color: var(--color-jade); }
+.criteria-greeting strong { color: var(--color-forest); }
 
 .criteria-portrait {
   position: relative; margin: 0; min-width: 0;
