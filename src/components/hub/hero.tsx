@@ -1,10 +1,47 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const statTargets = [10, 4, 50, 6];
 
 export function Hero() {
   const [videoReady, setVideoReady] = useState(false);
   const [counts, setCounts] = useState(statTargets);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Robust video playback & ready state detection
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const markReady = () => setVideoReady(true);
+
+    // If video already has data or is playing, show it immediately
+    if (video.readyState >= 2 || video.currentTime > 0) {
+      markReady();
+    }
+
+    video.addEventListener("canplay", markReady);
+    video.addEventListener("canplaythrough", markReady);
+    video.addEventListener("playing", markReady);
+    video.addEventListener("loadeddata", markReady);
+    video.addEventListener("timeupdate", () => {
+      if (video.currentTime > 0) markReady();
+    });
+
+    // Ensure autoplay initiates
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.then(markReady).catch(() => {
+        // Fallback gracefully to poster
+      });
+    }
+
+    return () => {
+      video.removeEventListener("canplay", markReady);
+      video.removeEventListener("canplaythrough", markReady);
+      video.removeEventListener("playing", markReady);
+      video.removeEventListener("loadeddata", markReady);
+    };
+  }, []);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -41,16 +78,22 @@ export function Hero() {
   return (
     <section className="hero hero-cinematic" id="top" aria-labelledby="hero-title">
       <div className="hero-scene" aria-hidden="true">
-        <img src="/images/african-youth.jpg" alt="" width={1600} height={1067} />
+        <img
+          src="/images/african-youth.jpg"
+          alt="Grade 8 students in Laoag City holding African literature collections"
+          width={2752}
+          height={1221}
+          decoding="async"
+        />
         <video
+          ref={videoRef}
           className={videoReady ? "hero-video is-ready" : "hero-video"}
           autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
           poster="/images/african-youth.jpg"
-          onCanPlay={() => setVideoReady(true)}
           onError={(event) => { event.currentTarget.style.display = "none"; }}
           tabIndex={-1}
         >

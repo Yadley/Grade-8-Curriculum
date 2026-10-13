@@ -122,22 +122,26 @@ export function Toolkit() {
             </p>
           </div>
 
-          {/* Editorial Classroom Hero Visual Card */}
-          <div className="toolkit-hero-visual-card" aria-label="Classroom pedagogical demonstration">
+          {/* Editorial Leadership & Vision Card */}
+          <div className="toolkit-hero-visual-card" aria-label="DepEd Leadership & Pedagogical Foundation">
             <div className="toolkit-hero-img-wrap">
               <img
-                src="/images/Filipino Teacher (2).jpg"
-                alt="Filipino secondary English teacher facilitating an active literary reading session"
+                src="/images/Angara.jpg"
+                alt="DepEd Secretary Sonny Angara on literature education in the Philippines"
                 className="toolkit-hero-img"
               />
               <div className="toolkit-hero-badge" aria-hidden="true">
                 <AfroTriangle color="#E0533C" size={16} rotation={15} />
-                <span>Classroom In Practice</span>
+                <span>DepEd Leadership</span>
               </div>
             </div>
             <div className="toolkit-hero-caption">
-              <strong>DepEd English 8 · Secondary Period Architecture</strong>
-              <p>Translating literary theory into adaptable 50-minute secondary lesson sequences.</p>
+              <blockquote className="toolkit-hero-quote">
+                “Appreciate literature as a means of understanding the human being and the forces he or she needs to contend with.”
+              </blockquote>
+              <cite className="toolkit-hero-author">
+                — DepEd Secretary Sonny Angara
+              </cite>
             </div>
           </div>
         </div>

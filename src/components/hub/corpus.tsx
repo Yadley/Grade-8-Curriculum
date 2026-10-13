@@ -148,7 +148,7 @@ export function Corpus() {
         )}
 
         <aside className="fine shelf-note" aria-label="Publication and edition note">
-          <strong>About these covers and dates</strong>
+          <strong>About these covers and dates:</strong>{" "}
           <span>
             The cards use a mix of original visual labels and supplied book or collection-cover
             imagery; none reproduces the literary text itself. Years shown follow the thesis

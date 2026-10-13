@@ -660,7 +660,7 @@ textarea.field { min-height: 8.5rem; resize: vertical; }
 .rail-book .cover-title { font-size: 0.98rem; }
 .rail-book .cover-copy { left: 0.5rem; right: 0.45rem; bottom: 0.5rem; }
 
-.shelf-note { margin-top: 1.5rem; max-width: 40rem; }
+.shelf-note { margin-top: 1.5rem; width: 100%; max-width: 100%; box-sizing: border-box; }
 
 /* ── Dossier modal (slide-up sheet) ── */
 .dossier-top { display: grid; gap: 1.1rem; }
