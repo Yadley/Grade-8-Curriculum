@@ -81,7 +81,7 @@ export function Dossier({ work, onClose }: { work: Work | null; onClose: () => v
                   <h3>In the twelve-minute read</h3>
                   <p>{work.focus}</p>
                   <p className="fine">
-                    First model: {work.model}. Lens: {work.lens}.
+                    Suggested approach: {work.model}. Reading lens: {work.lens}.
                   </p>
                 </section>
                 <section>
