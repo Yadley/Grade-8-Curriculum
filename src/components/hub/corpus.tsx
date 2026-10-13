@@ -31,7 +31,7 @@ export function Corpus() {
             <span className="kicker-shape" aria-hidden="true">
               <img src="/images/Shapes/African Shape (2).svg" alt="" />
             </span>
-            <p className="kicker">The shelf</p>
+            <p className="kicker">The Shelf</p>
           </div>
           <p>Drag sideways on a phone. On a larger screen the books drift — pause by hovering.</p>
         </div>
@@ -67,10 +67,10 @@ export function Corpus() {
             <span className="kicker-shape" aria-hidden="true">
               <img src="/images/Shapes/African Shape (1).svg" alt="" />
             </span>
-            <p className="kicker">Literary corpus</p>
+            <p className="kicker">Literary Corpus</p>
           </div>
           <h2 id="corpus-title" className="section-title">
-            Ten literary pieces. Explore the corpus.
+            Ten Literary Pieces. Explore the Corpus.
           </h2>
           <p className="lede">
             Five poems, two short stories, one critical essay, and two speculative fiction works, as
@@ -81,7 +81,7 @@ export function Corpus() {
 
         <div className="toolbar">
           <label className="lbl">
-            Search by title, author, or country
+            Search by Title, Author, or Country
             <input
               className="field"
               value={query}

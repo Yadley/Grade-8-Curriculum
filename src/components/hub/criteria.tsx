@@ -47,10 +47,10 @@ export function Criteria() {
                 <span className="kicker-shape" aria-hidden="true">
                   <img src="/images/Shapes/African Shape (1).svg" alt="" />
                 </span>
-                <p className="kicker">Selection criteria</p>
+                <p className="kicker">Selection Criteria</p>
               </div>
               <h2 id="criteria-title" className="section-title">
-                A defined corpus, with room for careful reading.
+                A Defined Corpus, With Room for Careful Reading.
               </h2>
             </div>
             <p className="criteria-greeting">

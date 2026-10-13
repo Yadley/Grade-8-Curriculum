@@ -76,7 +76,7 @@ export function Hero() {
           <p className="kicker hero-kicker">MMSU Graduate School · Laoag City</p>
         </div>
         <h1 id="hero-title" className="display">
-          African literature, <em>opened</em> for class.
+          African Literature, <em>Opened</em> for Class.
         </h1>
         <p className="hero-lede">
           Ten literary works. Real classroom strategies. A bridge between the worlds inside a
@@ -84,10 +84,10 @@ export function Hero() {
         </p>
         <div className="actions">
           <a className="btn btn-primary" href="#corpus">
-            Explore the collection <span aria-hidden="true">↗</span>
+            Explore the Collection <span aria-hidden="true">↗</span>
           </a>
           <a className="btn btn-ghost hero-ghost" href="#toolkits">
-            Explore the lesson guide <span aria-hidden="true">◷</span>
+            Explore the Lesson Guide <span aria-hidden="true">◷</span>
           </a>
         </div>
         <p className="hero-footnote">
@@ -97,24 +97,24 @@ export function Hero() {
 
       <div className="wrap stats" aria-label="Hub at a glance">
         <p className="stat">
-          <span className="stat-overline">The collection</span>
+          <span className="stat-overline">The Collection</span>
           <b>{counts[0]}</b>
-          <span>selected literary works</span>
+          <span>Selected Contemporary Works</span>
         </p>
         <p className="stat">
-          <span className="stat-overline">Genre map</span>
+          <span className="stat-overline">Genre Map</span>
           <b>{counts[1]}</b>
-          <span>genre groups in the thesis</span>
+          <span>Genre Groups in the Thesis</span>
         </p>
         <p className="stat">
-          <span className="stat-overline">Classroom plan</span>
+          <span className="stat-overline">Classroom Plan</span>
           <b>{counts[2]}</b>
-          <span>minutes mapped move by move</span>
+          <span>Minutes Mapped Move by Move</span>
         </p>
         <p className="stat">
-          <span className="stat-overline">Teaching lenses</span>
+          <span className="stat-overline">Teaching Lenses</span>
           <b>{counts[3]}</b>
-          <span>approaches assessed in the thesis</span>
+          <span>Approaches Assessed in the Thesis</span>
         </p>
       </div>
     </section>

@@ -1,5 +1,5 @@
-export type Genre = "Poetry" | "Short story" | "Critical essay" | "Speculative fiction";
-export type ModelName = "Information-based" | "Moral-philosophical" | "Personal-response" | "Paraphrastic" | "Language-based" | "Stylistic";
+export type Genre = "Poetry" | "Short Story" | "Critical Essay" | "Speculative Fiction";
+export type ModelName = "Information-Based" | "Moral-Philosophical" | "Personal-Response" | "Paraphrastic" | "Language-Based" | "Stylistic";
 
 export type Work = {
   id: string;
@@ -24,7 +24,7 @@ export type Work = {
   focus: string;
 };
 
-export const genres = ["All", "Poetry", "Short story", "Critical essay", "Speculative fiction"] as const;
+export const genres = ["All", "Poetry", "Short Story", "Critical Essay", "Speculative Fiction"] as const;
 export type GenreFilter = (typeof genres)[number];
 
 export const works: Work[] = [
@@ -44,7 +44,7 @@ export const works: Work[] = [
   {
     id: "vocabulary", number: "02", title: "Vocabulary", author: "Safia Elhillo",
     life: "Safia Elhillo is a Sudanese-American poet. “Vocabulary” appears in The January Children (2017).",
-    country: "Sudan / United States", region: "Northeast Africa / diaspora", era: "2017", genre: "Poetry", lens: "Language, translation, and cultural identity", model: "Language-based",
+    country: "Sudan / United States", region: "Northeast Africa / diaspora", era: "2017", genre: "Poetry", lens: "Language, translation, and cultural identity", model: "Language-Based",
     card: "A poem that uses the feel of a vocabulary test to explore what language can—and cannot—translate.",
     why: "Its form creates a natural entry into word choice, ambiguity, bilingual identity, and the limits of one-to-one translation.",
     situation: "Have learners notice the poem's test-like structure and consider how a word can carry meanings or associations that do not fit neatly into another language.",
@@ -56,7 +56,7 @@ export const works: Work[] = [
   {
     id: "home", number: "03", title: "Home", author: "Warsan Shire",
     life: "Warsan Shire is a Somali-British poet whose work often explores home, migration, belonging, and displacement.",
-    country: "Somalia / United Kingdom", region: "East Africa / diaspora", era: "2015 (as identified in the thesis inventory)", genre: "Poetry", lens: "Forced migration and the meaning of home", model: "Personal-response",
+    country: "Somalia / United Kingdom", region: "East Africa / diaspora", era: "2015 (as identified in the thesis inventory)", genre: "Poetry", lens: "Forced migration and the meaning of home", model: "Personal-Response",
     card: "A poem that asks readers to consider the conditions that can force people to leave home.",
     why: "The poem offers a way to discuss imagery, empathy, displacement, and how public narratives represent people who flee danger.",
     situation: "Frame the reading around the speaker's language and the conditions behind forced departure. Distinguish forced displacement from migration for other reasons.",
@@ -69,7 +69,7 @@ export const works: Work[] = [
   {
     id: "seamstress", number: "04", title: "The Careless Seamstress", author: "Tjawangwa Dema",
     life: "Tjawangwa Dema is a Motswana poet. The Careless Seamstress is the title of her 2019 poetry collection.",
-    country: "Botswana", region: "Southern Africa", era: "2019", genre: "Poetry", lens: "Gender, labor, and agency", model: "Moral-philosophical",
+    country: "Botswana", region: "Southern Africa", era: "2019", genre: "Poetry", lens: "Gender, labor, and agency", model: "Moral-Philosophical",
     card: "A poem for examining how language assigns value to women's work, skill, and agency.",
     why: "The title invites analysis of labels and assumptions. It can support discussion of labor and gender without treating one poem as representative of all African women.",
     situation: "Ask learners to consider the title's word “careless” and how the poem complicates expectations around work, gender, and recognition. Verify the poem's details against the authorized edition.",
@@ -81,7 +81,7 @@ export const works: Work[] = [
   {
     id: "yesterday-afternoon", number: "05", title: "what they did yesterday afternoon", author: "Warsan Shire",
     life: "Warsan Shire is a Somali-British poet. The thesis identifies this poem as a 2014 selection.",
-    country: "Somalia / United Kingdom", region: "East Africa / diaspora", era: "2014 (as identified in the thesis inventory)", genre: "Poetry", lens: "Conflict, displacement, and media distance", model: "Personal-response",
+    country: "Somalia / United Kingdom", region: "East Africa / diaspora", era: "2014 (as identified in the thesis inventory)", genre: "Poetry", lens: "Conflict, displacement, and media distance", model: "Personal-Response",
     card: "A poem for exploring the contrast between lived experience of conflict and distant accounts of it.",
     why: "It can help learners examine voice, perspective, and how language shapes the distance between an event and the people who experience it.",
     situation: "Guide learners to attend to perspective and the poem's portrayal of everyday life affected by conflict. Confirm publication details and text wording using the edition available to the school.",
@@ -94,7 +94,7 @@ export const works: Work[] = [
   {
     id: "how-to-write", number: "06", title: "How to Write About Africa", author: "Binyavanga Wainaina",
     life: "Binyavanga Wainaina (1971–2019) was a Kenyan writer and editor. The satirical essay appeared in Granta in 2005.",
-    country: "Kenya", region: "East Africa", era: "2005", genre: "Critical essay", lens: "Stereotypes, satire, and representation", model: "Stylistic",
+    country: "Kenya", region: "East Africa", era: "2005", genre: "Critical Essay", lens: "Stereotypes, satire, and representation", model: "Stylistic",
     card: "A satirical essay that exposes recurring clichés used to flatten the representation of Africa.",
     why: "The essay provides a direct route into media literacy, tone, command forms, satire, and the ethical choices involved in describing a place.",
     situation: "Wainaina imitates the voice of someone giving instructions for writing about Africa in stereotyped ways. Learners should recognize that the essay is criticizing those habits, not endorsing them.",
@@ -106,7 +106,7 @@ export const works: Work[] = [
   {
     id: "budapest", number: "07", title: "Hitting Budapest", author: "NoViolet Bulawayo",
     life: "NoViolet Bulawayo is a Zimbabwean writer. “Hitting Budapest” won the 2011 Caine Prize for African Writing and later became the opening chapter of We Need New Names.",
-    country: "Zimbabwe", region: "Southern Africa", era: "2011", genre: "Short story", lens: "Childhood, inequality, and point of view", model: "Information-based",
+    country: "Zimbabwe", region: "Southern Africa", era: "2011", genre: "Short Story", lens: "Childhood, inequality, and point of view", model: "Information-Based",
     card: "Children's point of view makes play, hunger, and unequal neighborhoods visible in the same afternoon.",
     why: "The story supports discussion of narrator, setting, social contrast, and how a child's perspective shapes what readers notice.",
     situation: "The children travel from their neighborhood to a wealthier area they call Budapest. Discuss the journey and the guavas as story details; avoid reducing Zimbabwe to poverty or treating the characters as representatives of every child there.",
@@ -118,7 +118,7 @@ export const works: Work[] = [
   {
     id: "greet-home", number: "08", title: "Who Will Greet You at Home", author: "Lesley Nneka Arimah",
     life: "Lesley Nneka Arimah is a Nigerian writer. “Who Will Greet You at Home” appeared in The New Yorker in 2015 and was a finalist for the 2017 Caine Prize.",
-    country: "Nigeria", region: "West Africa", era: "2015", genre: "Short story", lens: "Motherhood, social expectations, class, and magical realism", model: "Moral-philosophical",
+    country: "Nigeria", region: "West Africa", era: "2015", genre: "Short Story", lens: "Motherhood, social expectations, class, and magical realism", model: "Moral-Philosophical",
     card: "A speculative premise—babies crafted from different materials—opens difficult questions about motherhood and social pressure.",
     why: "The story's imaginative premise gives learners a way to analyze symbolism, social expectations, and how speculative elements reveal real pressures.",
     situation: "Discuss the story's crafted babies as a speculative device and examine how class and expectations shape the characters' choices. Avoid presenting one cultural account as a universal Nigerian experience.",
@@ -131,7 +131,7 @@ export const works: Work[] = [
   {
     id: "spider-artist", number: "09", title: "Spider the Artist", author: "Nnedi Okorafor",
     life: "Nnedi Okorafor is a Nigerian-American writer known for speculative fiction. “Spider the Artist” appeared in Kabu Kabu (2013); confirm the exact edition used for teaching.",
-    country: "Nigeria", region: "West Africa", era: "2008 (as identified in the thesis inventory)", genre: "Speculative fiction", lens: "Oil extraction, technology, environment, and resistance", model: "Information-based",
+    country: "Nigeria", region: "West Africa", era: "2008 (as identified in the thesis inventory)", genre: "Speculative Fiction", lens: "Oil extraction, technology, environment, and resistance", model: "Information-Based",
     card: "A speculative story connects music and technology with the social and environmental effects of oil extraction.",
     why: "The story supports speculative reading and discussion of how imagined technology can illuminate real environmental and political concerns.",
     situation: "Help learners distinguish the story's imagined elements from the real-world context of oil extraction in the Niger Delta. Verify the publication details against the edition being used.",
@@ -143,7 +143,7 @@ export const works: Work[] = [
   {
     id: "five-years", number: "10", title: "Five Years Next Sunday", author: "Idza Luhumyo",
     life: "Idza Luhumyo is a Kenyan writer. “Five Years Next Sunday” is identified in the thesis inventory as a 2022 speculative work and associated with the Caine Prize for African Writing.",
-    country: "Kenya", region: "East Africa", era: "2022 (as identified in the thesis inventory)", genre: "Speculative fiction", lens: "Climate, resource commodification, and folklore", model: "Stylistic",
+    country: "Kenya", region: "East Africa", era: "2022 (as identified in the thesis inventory)", genre: "Speculative Fiction", lens: "Climate, resource commodification, and folklore", model: "Stylistic",
     card: "A speculative narrative draws on folklore to ask who controls resources and what communities owe the future.",
     why: "The work brings climate concerns, narrative form, and traditional knowledge into the corpus without treating African speculative fiction as a single genre or worldview.",
     situation: "Invite learners to track the story's imagined future and the role of the rainmaker. Verify plot details and publication information against the approved edition before preparing a lesson.",

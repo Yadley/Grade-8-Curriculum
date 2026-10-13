@@ -238,19 +238,19 @@ export function AfricaCanvas() {
               <span className="topline-glyph" aria-hidden="true">
                 <img src="/images/Shapes/African Shape (1).svg" alt="" />
               </span>
-              <span>Six visual fragments</span>
+              <span>Six Visual Fragments</span>
             </div>
-            <span>One continent. Countless stories.</span>
+            <span>One Continent. Countless Stories.</span>
           </div>
 
           {/* Editorial Headline & Interactive Curation Controls */}
           <div className="africa-canvas-copy">
             <div className="canvas-kicker-row">
-              <p className="africa-canvas-kicker">Beyond the page</p>
+              <p className="africa-canvas-kicker">Beyond the Page</p>
               <span className="canvas-interactive-pill">✦ Draggable & Sortable</span>
             </div>
             <h2 id="africa-canvas-title">
-              Africa is not a <em>single story.</em>
+              Africa Is Not a <em>Single Story.</em>
             </h2>
             <p>
               Colour. Place. Memory. Making. Drag any piece across the canvas or drop over another
@@ -259,7 +259,7 @@ export function AfricaCanvas() {
 
             {/* Interactive Curation Toolbar */}
             <div className="canvas-curator-toolbar" role="toolbar" aria-label="Exhibition layout controls">
-              <span className="curator-toolbar-label">Curate layout:</span>
+              <span className="curator-toolbar-label">Curate Layout:</span>
               <div className="curator-btn-group">
                 <button
                   type="button"
@@ -267,7 +267,7 @@ export function AfricaCanvas() {
                   onClick={() => setViewMode("collage")}
                   title="Switch to asymmetrical editorial collage"
                 >
-                  Collage
+                  Collage View
                 </button>
                 <button
                   type="button"
@@ -275,7 +275,7 @@ export function AfricaCanvas() {
                   onClick={() => setViewMode("grid")}
                   title="Switch to balanced gallery grid"
                 >
-                  Grid
+                  Grid View
                 </button>
                 <button
                   type="button"
@@ -283,7 +283,7 @@ export function AfricaCanvas() {
                   onClick={handleSortShuffle}
                   title="Remix the narrative order"
                 >
-                  🔀 Remix
+                  🔀 Remix Order
                 </button>
                 <button
                   type="button"
@@ -291,7 +291,7 @@ export function AfricaCanvas() {
                   onClick={handleSortSequential}
                   title="Sort 01 through 06 sequentially"
                 >
-                  🔢 01–06
+                  🔢 Sort 01–06
                 </button>
                 <button
                   type="button"
@@ -299,14 +299,14 @@ export function AfricaCanvas() {
                   onClick={handleResetPositions}
                   title="Reset positions and arrangement"
                 >
-                  ↺ Reset
+                  ↺ Reset Order
                 </button>
               </div>
             </div>
 
             <div className="canvas-cta-row">
               <a href="#corpus" className="africa-canvas-link">
-                Meet the voices <span aria-hidden="true">↗</span>
+                Meet the Voices <span aria-hidden="true">↗</span>
               </a>
               <span className="canvas-drag-hint">
                 <span className="drag-hand-icon" aria-hidden="true">✋</span> Click & drag any piece to reorder

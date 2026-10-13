@@ -36,7 +36,7 @@ export function Footer() {
             </div>
 
             <button type="button" className="footer-back-to-top" onClick={scrollToTop}>
-              Back to top <span aria-hidden="true">↑</span>
+              Back to Top <span aria-hidden="true">↑</span>
             </button>
           </div>
         </div>
@@ -52,11 +52,11 @@ export function Footer() {
           </div>
           <div>
             <span className="footer-label">Advisory Committee</span>
-            <p>Romel A. Pascua, Ph.D. (Chair) · Winicel May Ancheta, Ph.D. · Jahnese Asuncion, Ph.D. · Jeanette Dials</p>
+            <p>Romel A. Pascua, Ph.D. (Chair) · Winicel May C. Ancheta, Ph.D. · Jahnese D. Asuncion, Ph.D. · Jeanette G. Dials, Ed.D.</p>
           </div>
           <div>
             <span className="footer-label">Compliance & Rights</span>
-            <p>Republic Act No. 10173 · Open Educational Resource · Local device storage only</p>
+            <p>Republic Act No. 10173 · Open Educational Resource · Local Device Storage Only</p>
           </div>
         </div>
       </div>
