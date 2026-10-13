@@ -24,9 +24,9 @@ export function Hero() {
       </div>
       <div className="wrap stats" aria-label="Hub at a glance">
         <p className="stat"><b>10</b><span>selected works</span></p>
-        <p className="stat"><b>5</b><span>genres, from poem to future</span></p>
+        <p className="stat"><b>4</b><span>genre groups in the thesis</span></p>
         <p className="stat"><b>50</b><span>minutes, mapped move by move</span></p>
-        <p className="stat"><b>3</b><span>Carter &amp; Long models</span></p>
+        <p className="stat"><b>6</b><span>teaching approaches assessed</span></p>
       </div>
     </section>
   );
