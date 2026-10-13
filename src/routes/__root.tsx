@@ -3,6 +3,7 @@ import { ReactLenis } from "lenis/react";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
+import hubInteractionCss from "../hub-interactions.css?url";
 
 const APP_NAME = "African Literature Hub";
 
@@ -28,6 +29,7 @@ export const Route = createRootRoute({
         href: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap",
       },
       { rel: "stylesheet", href: appCss },
+      { rel: "stylesheet", href: hubInteractionCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],
