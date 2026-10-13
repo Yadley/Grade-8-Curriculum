@@ -17,6 +17,7 @@ export type Work = {
   why: string;
   situation: string;
   note?: string;
+  quote?: { text: string; cite: string };
   words: { term: string; gloss: string }[];
   bridge: string;
   questions: string[];
