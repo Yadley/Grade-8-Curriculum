@@ -2861,3 +2861,39 @@
   .corpus-block .book,
   .africa-canvas .africa-art { transition: none !important; }
 }
+
+/* Targeted composition for the Africa Canvas headline and remix seal */
+.africa-canvas-copy { max-width: min(46rem, 52%); }
+.africa-canvas-copy h2 {
+  max-width: 10.5ch;
+  font-size: clamp(2.8rem, 5.3vw, 5.6rem);
+  line-height: .94;
+  letter-spacing: -.045em;
+  text-wrap: initial;
+}
+.africa-canvas-copy h2 em { white-space: nowrap; }
+.africa-canvas-copy > p { max-width: 40ch; line-height: 1.72; margin-top: 1.35rem; }
+.africa-art-stamp {
+  min-width: 154px;
+  min-height: 154px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .8rem;
+  line-height: 1.1;
+}
+.africa-art-stamp > span { font-size: clamp(1.15rem, 1.8vw, 1.65rem); }
+.africa-art-stamp small { display: block; margin-top: .15rem; line-height: 1.4; }
+.africa-canvas-bottomline { padding-top: 1.2rem; }
+@media (max-width: 800px) {
+  .africa-canvas-copy { max-width: 76%; }
+  .africa-canvas-copy h2 { font-size: clamp(2.35rem, 8vw, 4rem); max-width: 11ch; }
+  .africa-art-stamp { min-width: 112px; min-height: 112px; padding: .8rem; }
+}
+@media (max-width: 560px) {
+  .africa-canvas-copy { max-width: 100%; }
+  .africa-canvas-copy h2 { font-size: clamp(2rem, 9vw, 3rem); }
+  .africa-art-stamp { min-width: 96px; min-height: 96px; }
+  .criteria-highlights { flex-wrap: wrap; }
+}
