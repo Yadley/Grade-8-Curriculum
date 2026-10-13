@@ -59,7 +59,7 @@ export function Corpus() {
         <div className="block-head">
           <p className="kicker">Literary corpus</p>
           <h2 id="corpus-title" className="section-title">
-            Ten books. Open any one.
+            Ten literary pieces. Explore the corpus.
           </h2>
           <p className="lede">
             Poetry 5, short stories 2, a critical essay, a novel excerpt, and one work of
