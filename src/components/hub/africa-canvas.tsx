@@ -250,7 +250,7 @@ export function AfricaCanvas() {
               <span className="canvas-interactive-pill">✦ Draggable & Sortable</span>
             </div>
             <h2 id="africa-canvas-title">
-              Africa Is Not a <em>Single Story.</em>
+              Africa Is Not a<br /> <em>Single Story.</em>
             </h2>
             <p>
               Colour. Place. Memory. Making. Drag any piece across the canvas or drop over another

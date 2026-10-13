@@ -2641,3 +2641,259 @@
   .toolkit-shape-float, .scatter-shape, .access-shape-float, .study-shape-float { display: none; }
 }
 
+
+
+/* ── Editorial polish pass: spacing, line-length, portraits and corpus ── */
+.criteria-highlights {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: clamp(.35rem, .8vw, .7rem);
+  max-width: 100%;
+  margin-top: 1.45rem;
+}
+.criteria-highlights .highlight-pill {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  gap: .45rem;
+  padding: .58rem .72rem;
+  font-size: clamp(.66rem, .78vw, .78rem);
+  letter-spacing: -.015em;
+}
+.criteria-highlights .highlight-pill > span:last-child {
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .criteria-highlights { gap: .35rem; }
+  .criteria-highlights .highlight-pill { padding: .52rem .58rem; font-size: .68rem; }
+}
+@media (max-width: 620px) {
+  .criteria-highlights { flex-wrap: wrap; }
+  .criteria-highlights .highlight-pill { white-space: normal; }
+  .criteria-highlights .highlight-pill > span:last-child { white-space: normal; }
+}
+
+/* Keep the editorial statement confident and intentionally composed. */
+.africa-canvas .canvas-title,
+.africa-canvas h2,
+.africa-canvas .africa-canvas-title {
+  max-width: 13ch;
+  text-wrap: balance;
+}
+.africa-canvas .canvas-title em,
+.africa-canvas h2 em,
+.africa-canvas .africa-canvas-title em { white-space: nowrap; }
+
+/* Give the remix gallery enough vertical rhythm to read as a designed interlude. */
+.africa-canvas .africa-canvas-intro,
+.africa-canvas .canvas-intro,
+.africa-canvas .africa-canvas-heading {
+  margin-bottom: clamp(2rem, 4.5vw, 4.5rem);
+}
+.africa-canvas .africa-canvas-intro p,
+.africa-canvas .canvas-intro p,
+.africa-canvas .africa-canvas-heading p { line-height: 1.75; }
+.africa-canvas .africa-canvas-controls { margin-top: 1.35rem; }
+.africa-canvas .africa-canvas-label,
+.africa-canvas .canvas-label { margin-bottom: .75rem; }
+.africa-canvas .africa-canvas-story,
+.africa-canvas .africa-art { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease; }
+
+/* Corpus cards: consistent image window, calmer metadata and even breathing room. */
+.corpus-block .block-head { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+.corpus-block .lede { max-width: 68ch; line-height: 1.75; }
+.corpus-block .shelf {
+  align-items: stretch;
+  gap: clamp(1.1rem, 2vw, 1.8rem);
+  margin-top: 1.25rem;
+}
+.corpus-block .book {
+  min-width: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  padding: .65rem;
+  border-radius: 1rem;
+  text-align: left;
+  background: rgb(255 255 255 / 54%);
+  border: 1px solid rgb(18 63 43 / 10%);
+  box-shadow: 0 8px 24px rgb(18 35 25 / 5%);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.corpus-block .book:hover,
+.corpus-block .book:focus-visible {
+  transform: translateY(-4px);
+  border-color: rgb(22 132 91 / 38%);
+  box-shadow: 0 18px 36px rgb(18 35 25 / 11%);
+}
+.corpus-block .book > .cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: .72rem;
+  overflow: hidden;
+}
+.corpus-block .cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.corpus-block .cover-copy { padding: clamp(.75rem, 1.2vw, 1.15rem); }
+.corpus-block .cover-title { text-wrap: balance; line-height: 1.02; }
+.corpus-block .book-caption {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .45rem;
+  padding: 0 .3rem .35rem;
+}
+.corpus-block .work-meta {
+  font-size: .68rem;
+  line-height: 1.45;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .72;
+}
+.corpus-block .work-card {
+  font-size: .9rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.corpus-block .shelf-note {
+  max-width: 82ch;
+  margin: clamp(2rem, 4vw, 3.25rem) auto 0;
+  padding: 1.15rem 1.4rem;
+  border-left: 3px solid var(--color-jade);
+  border-radius: 0 .7rem .7rem 0;
+  background: rgb(18 63 43 / 5%);
+  color: var(--color-ink);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.corpus-block .toolbar { gap: 1.2rem; margin-bottom: 1.5rem; }
+.corpus-block .chips { gap: .55rem; }
+.corpus-block .chip { padding: .65rem .9rem; }
+
+/* People cards: portrait-first, with a consistent crop and a quieter information hierarchy. */
+.contributors-six-grid {
+  align-items: stretch;
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+.contributor-card-v2 {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 1.1rem;
+  border: 1px solid rgb(18 63 43 / 12%);
+  background: var(--color-paper, #fbf8f0);
+  box-shadow: 0 10px 28px rgb(18 35 25 / 7%);
+}
+.contributor-card-v2 .contributor-visual-frame {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+  overflow: hidden;
+  background: #e9e4d8;
+  border-radius: 0 !important;
+}
+.contributor-card-v2 .person-portrait-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: .35rem;
+  background: #e9e4d8;
+}
+.contributor-card-v2 .institution-seal-img {
+  max-width: 68% !important;
+  max-height: 68% !important;
+}
+.contributor-card-v2 .contributor-initials { z-index: 0; opacity: .18; }
+.contributor-card-v2 .person-portrait-img,
+.contributor-card-v2 .institution-seal-img { position: relative; z-index: 1; }
+.contributor-card-v2 .contributor-photo-tag {
+  z-index: 2;
+  right: .8rem;
+  bottom: .8rem;
+}
+.contributor-card-v2 .contributor-copy-v2 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: .65rem;
+  padding: 1.15rem 1.2rem 1.35rem;
+}
+.contributor-card-v2 .contributor-kind-row { align-items: center; gap: .6rem; }
+.contributor-card-v2 .contributor-kind-badge {
+  max-width: calc(100% - 2rem);
+  padding: .38rem .6rem;
+  border-radius: 999px;
+  font-size: .65rem;
+  line-height: 1.25;
+}
+.contributor-card-v2 .contributor-card-index { opacity: .45; }
+.contributor-card-v2 h3 {
+  margin: .15rem 0 0;
+  font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.contributor-card-v2 .contributor-role-text,
+.contributor-card-v2 .contributor-tagline-text {
+  margin: 0;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.contributor-card-v2 .contributor-role-text { font-size: .87rem; opacity: .82; }
+.contributor-card-v2 .contributor-tagline-text { margin-top: auto; padding-top: .5rem; font-size: .78rem; font-weight: 600; color: var(--color-jade); }
+@media (max-width: 640px) {
+  .corpus-block .shelf { gap: .9rem; }
+  .corpus-block .book { padding: .45rem; }
+  .corpus-block .work-card { font-size: .8rem; }
+  .contributor-card-v2 .contributor-copy-v2 { padding: .9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .corpus-block .book,
+  .africa-canvas .africa-art { transition: none !important; }
+}
+
+/* Targeted composition for the Africa Canvas headline and remix seal */
+.africa-canvas-copy { max-width: min(46rem, 52%); }
+.africa-canvas-copy h2 {
+  max-width: 10.5ch;
+  font-size: clamp(2.8rem, 5.3vw, 5.6rem);
+  line-height: .94;
+  letter-spacing: -.045em;
+  text-wrap: initial;
+}
+.africa-canvas-copy h2 em { white-space: nowrap; }
+.africa-canvas-copy > p { max-width: 40ch; line-height: 1.72; margin-top: 1.35rem; }
+.africa-art-stamp {
+  min-width: 154px;
+  min-height: 154px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .8rem;
+  line-height: 1.1;
+}
+.africa-art-stamp > span { font-size: clamp(1.15rem, 1.8vw, 1.65rem); }
+.africa-art-stamp small { display: block; margin-top: .15rem; line-height: 1.4; }
+.africa-canvas-bottomline { padding-top: 1.2rem; }
+@media (max-width: 800px) {
+  .africa-canvas-copy { max-width: 76%; }
+  .africa-canvas-copy h2 { font-size: clamp(2.35rem, 8vw, 4rem); max-width: 11ch; }
+  .africa-art-stamp { min-width: 112px; min-height: 112px; padding: .8rem; }
+}
+@media (max-width: 560px) {
+  .africa-canvas-copy { max-width: 100%; }
+  .africa-canvas-copy h2 { font-size: clamp(2rem, 9vw, 3rem); }
+  .africa-art-stamp { min-width: 96px; min-height: 96px; }
+  .criteria-highlights { flex-wrap: wrap; }
+}

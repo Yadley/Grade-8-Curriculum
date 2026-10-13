@@ -7,7 +7,6 @@ import { Corpus } from "@/components/hub/corpus";
 import { Toolkit } from "@/components/hub/toolkit";
 import { Access } from "@/components/hub/access";
 import { Contributors } from "@/components/hub/contributors";
-import { Study } from "@/components/hub/study";
 import { Footer } from "@/components/hub/footer";
 
 export const Route = createFileRoute("/")({ component: Home });
@@ -25,7 +24,6 @@ function Home() {
         <Toolkit />
         <Access />
         <Contributors />
-        <Study />
       </main>
       <Footer />
     </>
