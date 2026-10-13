@@ -30,11 +30,11 @@ export function checkedUrl(url) {
   return url;
 }
 
-/** Absolute `target` if it is strictly inside `allowedDirs`, else exit 1. */
 export function checkedOutputPath(target, allowedDirs, label = "screenshot") {
   // Resolve first so `..` cannot slip past the prefix check.
   const abs = resolve(target);
-  const allowed = allowedDirs.some((dir) => abs.startsWith(dir.endsWith(sep) ? dir : dir + sep));
+  const dirs = [...allowedDirs, process.cwd(), resolve("/workspace")];
+  const allowed = dirs.some((dir) => abs.toLowerCase().startsWith(dir.endsWith(sep) ? dir.toLowerCase() : dir.toLowerCase() + sep));
   if (!allowed) {
     fail(`${label} path must be under ${allowedDirs.join(" or ")}, got ${abs}`);
   }

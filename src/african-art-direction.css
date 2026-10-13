@@ -4,7 +4,7 @@
    Africa is the experience, not the decoration.
    
    Palette: Forest #123F2B · Jade #16845B · Coral #F27563
-           Sun #F2C94C · Canvas #F5F0E6
+            Sun #F2C94C · Canvas #F5F0E6
    
    Pillars: Contemporary African Artistry / Cinematic Storytelling /
             Editorial Authority / Living Architecture / Scholarly Warmth
@@ -14,7 +14,7 @@
 /* The frame opens from a contained art object into near-full-bleed exhibition */
 .africa-canvas {
   position: relative;
-  height: 220svh;
+  height: 230svh;
   background: var(--color-deep);
   color: var(--color-canvas);
 }
@@ -25,7 +25,7 @@
   display: grid;
   place-items: center;
   height: 100svh;
-  min-height: 620px;
+  min-height: 640px;
   overflow: hidden;
 }
 
@@ -38,8 +38,8 @@
   position: relative;
   isolation: isolate;
   width: var(--canvas-width);
-  height: min(84svh, 840px);
-  min-height: 560px;
+  height: min(86svh, 860px);
+  min-height: 580px;
   overflow: hidden;
   border-radius: var(--canvas-radius);
   background: #11291b;
@@ -54,7 +54,7 @@
   position: absolute; z-index: 7;
   inset: auto 0 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--color-sun), var(--color-coral));
+  background: linear-gradient(90deg, var(--color-sun), var(--color-coral), var(--color-jade));
   transform: scaleX(var(--scroll-progress, 0));
   transform-origin: left center;
   pointer-events: none;
@@ -73,12 +73,29 @@
   pointer-events: none;
 }
 
+/* Continental Watermark in Canvas background */
+.africa-canvas-watermark {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  width: min(580px, 46vw);
+  pointer-events: none;
+  opacity: 0.055;
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+.africa-canvas-watermark img {
+  width: 100%;
+  height: auto;
+  filter: invert(1);
+}
+
 /* Editorial top/bottom markers */
 .africa-canvas-topline, .africa-canvas-bottomline {
   position: absolute; z-index: 5;
   left: clamp(1.2rem, 4vw, 4rem);
   right: clamp(1.2rem, 4vw, 4rem);
-  display: flex; justify-content: space-between; gap: 1rem;
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
   color: rgb(245 240 230 / 72%);
   font-family: var(--font-kicker);
   font-size: .65rem; font-weight: 700;
@@ -87,17 +104,36 @@
 .africa-canvas-topline { top: clamp(1.3rem, 3vw, 2.5rem); }
 .africa-canvas-bottomline { bottom: clamp(1.3rem, 3vw, 2.5rem); }
 
+.topline-left, .bottomline-left {
+  display: flex; align-items: center; gap: .6rem;
+}
+.topline-glyph, .bottomline-shape {
+  display: grid; place-items: center;
+  width: 1.1rem; height: 1.1rem;
+  opacity: .8;
+}
+.topline-glyph img, .bottomline-shape img {
+  width: 100%; height: 100%;
+  filter: invert(1);
+}
+
 /* Editorial headline area */
 .africa-canvas-copy {
-  position: absolute; z-index: 4;
-  top: 22%; left: clamp(1.5rem, 7vw, 7rem);
-  width: min(44%, 520px);
+  position: absolute; z-index: 10;
+  top: 18%; left: clamp(1.5rem, 6vw, 6rem);
+  width: min(46%, 540px);
   text-shadow: 0 2px 28px rgb(0 0 0 / 22%);
+  pointer-events: auto;
+}
+
+.canvas-kicker-row {
+  display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;
+  margin-bottom: 0.8rem;
 }
 
 .africa-canvas-kicker {
   display: flex; align-items: center; gap: .65rem;
-  margin: 0 0 1.1rem;
+  margin: 0;
   color: var(--color-sun);
   font-family: var(--font-kicker);
   font-size: .7rem; font-weight: 700;
@@ -110,10 +146,22 @@
   transform: rotate(-7deg);
 }
 
+.canvas-interactive-pill {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(242, 201, 76, 0.16);
+  border: 1px solid rgba(242, 201, 76, 0.6);
+  color: var(--color-sun);
+  font-family: var(--font-kicker);
+  font-size: 0.64rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+
 .africa-canvas-copy h2 {
   max-width: 9.5ch; margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(3rem, 5.8vw, 7rem);
+  font-size: clamp(2.8rem, 5.4vw, 6.2rem);
   font-weight: 400;
   letter-spacing: -.06em;
   line-height: .88;
@@ -125,21 +173,72 @@
 }
 
 .africa-canvas-copy > p:not(.africa-canvas-kicker) {
-  max-width: 23rem;
-  margin: 1.4rem 0;
-  color: rgb(245 240 230 / 80%);
-  font-size: clamp(.9rem, .85rem + .3vw, 1.1rem);
+  max-width: 25rem;
+  margin: 1.1rem 0;
+  color: rgb(245 240 230 / 84%);
+  font-size: clamp(.88rem, .82rem + .3vw, 1.05rem);
   line-height: 1.55;
+}
+
+/* Curator interactive toolbar */
+.canvas-curator-toolbar {
+  margin: 1rem 0;
+  display: flex; flex-direction: column; gap: 0.45rem;
+}
+
+.curator-toolbar-label {
+  color: rgb(245 240 230 / 60%);
+  font-family: var(--font-kicker);
+  font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+
+.curator-btn-group {
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+
+.curator-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(245, 240, 230, 0.1);
+  border: 1px solid rgba(245, 240, 230, 0.22);
+  color: var(--color-canvas);
+  font-family: var(--font-sans);
+  font-size: 0.74rem; font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms ease;
+  user-select: none;
+}
+.curator-btn:hover {
+  background: rgba(245, 240, 230, 0.22);
+  border-color: var(--color-sun);
+  color: var(--color-sun);
+  transform: translateY(-1px);
+}
+.curator-btn.is-active {
+  background: var(--color-sun);
+  color: var(--color-forest);
+  border-color: var(--color-sun);
+  font-weight: 700;
+}
+.curator-btn-ghost {
+  opacity: 0.75;
+}
+
+.canvas-cta-row {
+  display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+  margin-top: 0.6rem;
 }
 
 /* CTA link with editorial underline */
 .africa-canvas-link {
   display: inline-flex; align-items: center;
-  gap: .8rem; margin-top: .5rem;
+  gap: .8rem;
   color: var(--color-canvas);
   text-decoration: none;
   border-bottom: 2px solid var(--color-sun);
-  padding-bottom: .4rem;
+  padding-bottom: .3rem;
   font-weight: 700;
   font-size: .88rem;
   transition: color 200ms ease, border-color 200ms ease;
@@ -149,92 +248,238 @@
   border-color: var(--color-coral);
 }
 
-/* ── Floating image art collage ── */
-.africa-canvas-art {
-  position: absolute; inset: 0; pointer-events: none;
+.canvas-drag-hint {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  color: rgb(245 240 230 / 68%);
+  font-size: 0.75rem; font-weight: 500;
+}
+.drag-hand-icon {
+  font-size: 0.9rem;
+  animation: pulse-hand 2s ease-in-out infinite;
+}
+@keyframes pulse-hand {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
 }
 
+/* ── Interactive Draggable & Sortable Collage Canvas ── */
+.africa-canvas-art {
+  position: absolute; inset: 0;
+  pointer-events: auto;
+}
+
+/* Common draggable card base */
 .africa-art {
-  position: absolute; z-index: 2;
-  margin: 0; overflow: hidden;
-  box-shadow: 0 24px 80px rgb(0 0 0 / 34%);
-  outline: 1px solid rgb(245 240 230 / 14%);
+  position: absolute;
+  margin: 0;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 36%);
+  outline: 1px solid rgb(245 240 230 / 18%);
   outline-offset: -1px;
-  transform: translateY(var(--art-shift, 54px)) rotate(var(--tilt, 0deg));
-  transition: border-radius .3s ease;
+  transition: transform 0.28s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.28s ease, outline-color 0.2s ease;
+}
+
+.africa-art-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.africa-art:hover {
+  outline-color: var(--color-sun);
+  box-shadow: 0 28px 75px rgb(0 0 0 / 44%);
+}
+.africa-art:hover .art-drag-pill {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Active Dragging State */
+.africa-art.is-dragging {
+  cursor: grabbing !important;
+  transition: none !important;
+  box-shadow: 0 38px 90px rgb(0 0 0 / 65%), 0 0 0 3px var(--color-sun) !important;
+  outline: none !important;
+  opacity: 0.98;
+}
+
+/* Drop Target Highlight (Swap preview) */
+.africa-art.is-drop-target {
+  outline: 3px dashed var(--color-sun) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 40px rgba(242, 201, 76, 0.55) !important;
+}
+
+.drop-target-glow {
+  position: absolute; inset: 0; z-index: 12;
+  border-radius: inherit;
+  background: rgba(242, 201, 76, 0.28);
+  backdrop-filter: blur(2px);
+  display: grid; place-items: center;
+  pointer-events: none;
+  animation: pulse-target 1s ease-in-out infinite alternate;
+}
+.drop-target-glow span {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: var(--color-forest);
+  color: var(--color-sun);
+  border: 1.5px solid var(--color-sun);
+  font-family: var(--font-kicker);
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+@keyframes pulse-target {
+  0% { opacity: 0.75; }
+  100% { opacity: 1; }
+}
+
+/* "Drag to sort" badge */
+.art-drag-pill {
+  position: absolute; top: 0.7rem; right: 0.7rem; z-index: 6;
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+  background: rgb(18 63 43 / 88%);
+  color: var(--color-sun);
+  border: 1px solid rgba(242, 201, 76, 0.5);
+  font-family: var(--font-kicker);
+  font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 180ms ease, transform 180ms ease;
+  pointer-events: none;
 }
 
 /* Dark gradient overlay on each art piece */
-.africa-art::after {
+.africa-art-inner::after {
   content: "";
   position: absolute; inset: 0;
   background:
-    linear-gradient(0deg, rgb(11 35 25 / 68%), transparent 46%),
-    linear-gradient(135deg, rgb(22 132 91 / 8%), transparent 55%);
+    linear-gradient(0deg, rgb(11 35 25 / 74%), transparent 48%),
+    linear-gradient(135deg, rgb(22 132 91 / 10%), transparent 55%);
+  pointer-events: none;
 }
 
 .africa-art img {
   display: block; width: 100%; height: 100%; object-fit: cover;
   transform: scale(var(--image-scale, 1.09));
   filter: saturate(1.1) contrast(1.02);
+  pointer-events: none;
+  user-select: none;
 }
 
 .africa-art figcaption {
-  position: absolute; z-index: 1;
+  position: absolute; z-index: 3;
   left: 1rem; bottom: 1rem;
   color: white;
   font-family: var(--font-kicker);
   font-size: .68rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase;
+  pointer-events: none;
 }
 .africa-art figcaption span { margin-right: .6rem; color: var(--color-sun); }
 
-/* Art piece layouts: organic sculptural shapes */
-.art-1 {
-  top: 10%; right: 8%; width: 23%; height: 43%;
+/* ── Collage Mode Slot Coordinates & Shapes ── */
+.is-collage-layout .slot-1 {
+  top: 10%; right: 7%; width: 23%; height: 43%;
   --tilt: 4deg;
-  border-radius: 48% 48% 8px 8px;
+  border-radius: 48% 48% 10px 10px;
 }
-.art-2 {
-  top: 38%; right: 31%; width: 19%; height: 32%;
+.is-collage-layout .slot-2 {
+  top: 38%; right: 30%; width: 19%; height: 32%;
   --tilt: -7deg;
-  border: 8px solid var(--color-sun);
+  border: 7px solid var(--color-sun);
+  border-radius: 12px;
 }
-.art-3 {
-  top: 16%; right: 36%; width: 16%; height: 25%;
+.is-collage-layout .slot-3 {
+  top: 15%; right: 35%; width: 16%; height: 25%;
   --tilt: 5deg;
   border-radius: 48% 48% 0 0;
 }
-.art-4 {
-  bottom: 12%; right: 8%; width: 20%; height: 31%;
+.is-collage-layout .slot-4 {
+  bottom: 11%; right: 7%; width: 20%; height: 31%;
   --tilt: -4deg;
   border-radius: 0 0 48% 48%;
 }
-.art-5 {
-  bottom: 9%; right: 30%; width: 14%; height: 24%;
+.is-collage-layout .slot-5 {
+  bottom: 9%; right: 29%; width: 14%; height: 24%;
   --tilt: 6deg;
-  border: 6px solid var(--color-coral);
+  border: 5px solid var(--color-coral);
+  border-radius: 10px;
 }
-.art-6 {
-  top: 8%; right: 18%; width: 12%; height: 20%;
+.is-collage-layout .slot-6 {
+  top: 8%; right: 17%; width: 12%; height: 20%;
   --tilt: -8deg;
   border-radius: 50%;
 }
 
+/* ── Grid Mode Slot Coordinates (Balanced Exhibition Grid) ── */
+.is-grid-layout .slot-1 {
+  top: 14%; right: 32%; width: 15%; height: 35%;
+  --tilt: 0deg; border-radius: 12px;
+}
+.is-grid-layout .slot-2 {
+  top: 14%; right: 17.5%; width: 13.5%; height: 35%;
+  --tilt: 0deg; border-radius: 12px;
+}
+.is-grid-layout .slot-3 {
+  top: 14%; right: 3%; width: 13.5%; height: 35%;
+  --tilt: 0deg; border-radius: 12px;
+}
+.is-grid-layout .slot-4 {
+  bottom: 10%; right: 32%; width: 15%; height: 35%;
+  --tilt: 0deg; border-radius: 12px;
+}
+.is-grid-layout .slot-5 {
+  bottom: 10%; right: 17.5%; width: 13.5%; height: 35%;
+  --tilt: 0deg; border-radius: 12px;
+}
+.is-grid-layout .slot-6 {
+  bottom: 10%; right: 3%; width: 13.5%; height: 35%;
+  --tilt: 0deg; border-radius: 12px;
+}
+
 /* "Stories in motion" floating stamp */
 .africa-art-stamp {
-  position: absolute; z-index: 3;
-  right: 7%; bottom: 10%;
-  display: grid; place-items: center;
-  width: 105px; height: 105px;
+  position: absolute; z-index: 10;
+  right: 6%; bottom: 8%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: 108px; height: 108px;
   border-radius: 50%;
   border: 2px solid var(--color-canvas);
   background: var(--color-coral);
   color: white;
-  font-family: var(--font-display); font-size: 1.15rem;
-  line-height: .95; text-align: center;
   transform: rotate(10deg);
-  box-shadow: 0 12px 44px rgb(0 0 0 / 24%);
+  box-shadow: 0 14px 44px rgb(0 0 0 / 28%);
+  cursor: pointer;
+  transition: transform 220ms ease, background-color 220ms ease;
+}
+.africa-art-stamp:hover {
+  transform: rotate(0deg) scale(1.08);
+  background: var(--color-sun);
+  color: var(--color-forest);
+  border-color: var(--color-forest);
+}
+.africa-art-stamp span {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: .95; text-align: center;
+}
+.africa-art-stamp small {
+  margin-top: 0.3rem;
+  font-family: var(--font-kicker);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
 }
 
 /* Woven African stripe at bottom of canvas section */
@@ -249,6 +494,460 @@
     var(--color-jade) 44px 66px,
     var(--color-canvas) 66px 88px
   );
+}
+
+/* ── Lightbox / Story Inspection Modal ── */
+.canvas-lightbox-backdrop {
+  position: fixed; inset: 0; z-index: 999;
+  background: rgb(11 35 25 / 82%);
+  backdrop-filter: blur(14px);
+  display: grid; place-items: center;
+  padding: 1.5rem;
+  animation: fadeIn 220ms ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.canvas-lightbox-card {
+  position: relative;
+  width: min(840px, 94vw);
+  max-height: 88vh;
+  overflow-y: auto;
+  border-radius: var(--radius-xl);
+  background: var(--color-forest);
+  color: var(--color-canvas);
+  border: 1px solid rgba(242, 201, 76, 0.3);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.55);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  animation: slideUp 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.canvas-lightbox-close {
+  position: absolute; top: 1rem; right: 1rem; z-index: 10;
+  width: 2.2rem; height: 2.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 240, 230, 0.3);
+  background: rgba(18, 63, 43, 0.85);
+  color: var(--color-canvas);
+  font-size: 1rem; cursor: pointer;
+  display: grid; place-items: center;
+  transition: all 180ms ease;
+}
+.canvas-lightbox-close:hover {
+  background: var(--color-coral);
+  border-color: var(--color-coral);
+  transform: rotate(90deg);
+}
+
+.canvas-lightbox-media {
+  position: relative;
+  min-height: 380px;
+}
+.canvas-lightbox-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.canvas-lightbox-copy {
+  padding: clamp(1.5rem, 4vw, 2.8rem);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.canvas-lightbox-copy .kicker { color: var(--color-sun); }
+.canvas-lightbox-copy h3 {
+  margin: 0.3rem 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.05;
+}
+.lightbox-quote {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-sun);
+  font-style: italic;
+  margin: 0 0 1.2rem;
+  line-height: 1.4;
+}
+.lightbox-desc {
+  color: rgb(245 240 230 / 80%);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0 0 1.8rem;
+}
+.lightbox-actions {
+  display: flex; gap: 0.8rem; flex-wrap: wrap;
+}
+
+@media (max-width: 740px) {
+  .canvas-lightbox-card {
+    grid-template-columns: 1fr;
+  }
+  .canvas-lightbox-media {
+    max-height: 260px;
+    min-height: auto;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   CRITERIA SECTION: TARA'S AFRICAN MAP MASK & 4 PILLARS SHAPES
+   ═══════════════════════════════════════════════════════════════════ */
+
+.criteria-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-sheet);
+  padding: clamp(3.5rem, 7vw, 6.5rem) 0;
+}
+
+/* Continental Watermark in Criteria section */
+.criteria-watermark {
+  position: absolute;
+  right: -5%;
+  top: 2%;
+  width: min(600px, 48vw);
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  z-index: 0;
+  transform: rotate(-6deg);
+}
+.criteria-watermark img {
+  width: 100%; height: auto;
+}
+
+.criteria-container {
+  position: relative;
+  z-index: 1;
+}
+
+.kicker-group {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.kicker-shape {
+  display: grid; place-items: center;
+  width: 1.1rem; height: 1.1rem;
+}
+.kicker-shape img {
+  width: 100%; height: 100%;
+}
+
+.criteria-intro {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+@media (min-width: 860px) {
+  .criteria-intro {
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.8fr);
+  }
+}
+
+.criteria-intro-copy .block-head {
+  margin-bottom: 1.2rem;
+}
+
+.criteria-greeting {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.1rem + .7vw, 1.85rem);
+  line-height: 1.22;
+  letter-spacing: -.02em;
+  color: var(--color-forest);
+}
+.criteria-greeting strong {
+  color: var(--color-jade);
+}
+
+.criteria-intro-copy > p:not(.criteria-greeting) {
+  margin: 0.9rem 0 0;
+  color: var(--color-muted);
+  line-height: 1.62;
+  font-size: 0.96rem;
+}
+
+.criteria-highlights {
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  margin-top: 1.6rem;
+}
+
+.highlight-pill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: var(--color-mist);
+  border: 1px solid color-mix(in srgb, var(--color-jade) 20%, transparent);
+  font-family: var(--font-kicker);
+  font-size: 0.74rem; font-weight: 700;
+  color: var(--color-forest);
+  letter-spacing: 0.04em;
+}
+.highlight-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--color-coral);
+}
+
+/* ── Tara's Portrait Masked with Africa.svg ── */
+.criteria-portrait-african {
+  position: relative;
+  margin: 0 auto;
+  width: min(100%, 420px);
+  display: flex; flex-direction: column; align-items: center;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.criteria-portrait-african:hover, .criteria-portrait-african.is-active {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Luminous Ambient Halo behind the continent silhouette */
+.africa-portrait-halo {
+  position: absolute;
+  inset: 5% 5% 15% 5%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 201, 76, 0.32) 0%, rgba(224, 83, 60, 0.18) 50%, transparent 75%);
+  filter: blur(36px);
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+.criteria-portrait-african:hover .africa-portrait-halo {
+  opacity: 1;
+  background: radial-gradient(circle, rgba(242, 201, 76, 0.48) 0%, rgba(224, 83, 60, 0.28) 50%, transparent 75%);
+}
+
+.africa-portrait-badge {
+  position: absolute;
+  top: -8px; left: 0px; z-index: 5;
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--color-forest);
+  color: var(--color-sun);
+  border: 1.5px solid var(--color-sun);
+  font-family: var(--font-kicker);
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(18, 63, 43, 0.22);
+}
+.badge-shape {
+  width: 0.95rem; height: 0.95rem;
+  filter: invert(1);
+}
+
+.africa-portrait-stage {
+  position: relative; z-index: 1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex; justify-content: center; align-items: center;
+  filter: drop-shadow(0 24px 50px rgba(18, 63, 43, 0.24));
+}
+
+.africa-mask-svg {
+  width: 100%; height: 100%;
+  overflow: visible;
+}
+
+.africa-contour-stroke {
+  filter: drop-shadow(0 0 6px rgba(242, 201, 76, 0.4));
+  transition: stroke-width 300ms ease;
+}
+.criteria-portrait-african:hover .africa-contour-stroke {
+  stroke-width: 3.5;
+}
+
+.africa-portrait-img-inner {
+  filter: saturate(1.05) contrast(1.04);
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.criteria-portrait-african:hover .africa-portrait-img-inner {
+  transform: scale(1.04);
+}
+
+.africa-portrait-caption {
+  margin-top: 1.1rem;
+  text-align: center;
+  display: flex; flex-direction: column; gap: 0.2rem;
+}
+.africa-portrait-caption strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-forest);
+}
+.africa-portrait-caption span {
+  font-family: var(--font-kicker);
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--color-muted);
+  letter-spacing: 0.06em;
+}
+
+/* ── 5 Pedagogical Pillars Grid with African Shapes ── */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.15rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 1100px) {
+  .pillars-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  .pillars-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .pillar-card:nth-child(1), .pillar-card:nth-child(2), .pillar-card:nth-child(3) {
+    grid-column: span 2;
+  }
+  .pillar-card:nth-child(4), .pillar-card:nth-child(5) {
+    grid-column: span 3;
+  }
+}
+
+.pillar-card {
+  position: relative;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: 1.7rem 1.45rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-canvas);
+  border: 1px solid var(--color-line);
+  overflow: hidden;
+  transition: transform 320ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 320ms ease, border-color 320ms ease;
+}
+
+/* Animated top accent stripe */
+.pillar-card::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-sun), var(--color-coral));
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--color-jade) 40%, transparent);
+  box-shadow: 0 20px 42px rgba(18, 63, 43, 0.12);
+}
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+.pillar-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 1.1rem;
+}
+
+.pillar-no {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--color-coral);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.pillar-shape-glyph {
+  display: grid; place-items: center;
+  width: 2.2rem; height: 2.2rem;
+  border-radius: 8px;
+  background: var(--color-mist);
+  padding: 0.4rem;
+  transition: background-color 260ms ease, transform 260ms ease;
+}
+.pillar-card:hover .pillar-shape-glyph {
+  background: var(--color-sun);
+  transform: rotate(6deg) scale(1.08);
+}
+.pillar-shape-glyph img {
+  width: 100%; height: 100%;
+}
+
+.pillar-card h3 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: var(--color-forest);
+  letter-spacing: -0.01em;
+}
+
+.pillar-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.pillar-footer {
+  margin-top: 1.4rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--color-line);
+}
+
+.pillar-concept {
+  font-family: var(--font-kicker);
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-jade);
+}
+
+/* ── Quote Band Enhanced with Geometric Brackets ── */
+.quote-band-enhanced {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding: clamp(2.2rem, 5vw, 4rem);
+  background: var(--color-sun);
+  color: var(--color-forest);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(18, 63, 43, 0.14);
+}
+
+.quote-shape-left, .quote-shape-right {
+  display: grid; place-items: center;
+  width: clamp(2.8rem, 6vw, 4.5rem);
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+}
+.quote-shape-left img, .quote-shape-right img {
+  width: 100%; height: auto;
+}
+
+.quote-content {
+  text-align: center;
+}
+
+.quote-content q {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1rem + 1.4vw, 2.15rem);
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+  quotes: none;
+  margin-bottom: 0.9rem;
+}
+
+.quote-content p {
+  margin: 0;
+  color: rgb(18 63 43 / 85%);
+  font-weight: 600;
+  font-size: clamp(0.88rem, 0.8rem + 0.3vw, 1.05rem);
+  line-height: 1.5;
 }
 
 /* ── Shelf band polish ── */
@@ -270,32 +969,51 @@
 
 /* ── Responsive adjustments ── */
 @media (max-width: 900px) {
-  .africa-canvas { height: 190svh; }
-  .africa-canvas-sticky { min-height: 560px; }
-  .africa-canvas-frame { width: 94%; height: 88svh; min-height: 520px; }
-  .africa-canvas-copy { top: 11%; left: 7%; width: 82%; }
-  .africa-canvas-copy h2 { max-width: 9ch; font-size: clamp(2.8rem, 9vw, 5rem); }
-  .africa-art { opacity: .92; }
-  .art-1 { top: auto; bottom: 12%; right: 8%; width: 38%; height: 29%; }
-  .art-2 { top: auto; bottom: 16%; right: 38%; width: 29%; height: 22%; }
-  .art-3 { top: auto; bottom: 36%; right: 10%; width: 25%; height: 19%; }
-  .art-4 { bottom: 8%; right: 45%; width: 25%; height: 19%; }
-  .art-5 { bottom: 38%; right: 38%; width: 23%; height: 18%; }
-  .art-6 { top: auto; bottom: 39%; right: 12%; width: 18%; height: 14%; }
-  .africa-art-stamp { width: 78px; height: 78px; font-size: .92rem; right: 5%; bottom: 6%; }
+  .africa-canvas { height: 200svh; }
+  .africa-canvas-sticky { min-height: 580px; }
+  .africa-canvas-frame { width: 94%; height: 90svh; min-height: 540px; }
+  .africa-canvas-copy { top: 11%; left: 6%; width: 88%; }
+  .africa-canvas-copy h2 { max-width: 9ch; font-size: clamp(2.6rem, 8.5vw, 4.8rem); }
+  
+  .is-collage-layout .slot-1 { top: auto; bottom: 12%; right: 6%; width: 38%; height: 28%; }
+  .is-collage-layout .slot-2 { top: auto; bottom: 15%; right: 38%; width: 29%; height: 22%; }
+  .is-collage-layout .slot-3 { top: auto; bottom: 35%; right: 8%; width: 25%; height: 18%; }
+  .is-collage-layout .slot-4 { bottom: 8%; right: 46%; width: 25%; height: 18%; }
+  .is-collage-layout .slot-5 { bottom: 35%; right: 36%; width: 23%; height: 17%; }
+  .is-collage-layout .slot-6 { top: auto; bottom: 38%; right: 10%; width: 18%; height: 14%; }
+  
+  .is-grid-layout .slot-1, .is-grid-layout .slot-2, .is-grid-layout .slot-3,
+  .is-grid-layout .slot-4, .is-grid-layout .slot-5, .is-grid-layout .slot-6 {
+    position: absolute;
+    width: 28%; height: 24%;
+  }
+  .is-grid-layout .slot-1 { bottom: 38%; right: 64%; }
+  .is-grid-layout .slot-2 { bottom: 38%; right: 34%; }
+  .is-grid-layout .slot-3 { bottom: 38%; right: 4%; }
+  .is-grid-layout .slot-4 { bottom: 10%; right: 64%; }
+  .is-grid-layout .slot-5 { bottom: 10%; right: 34%; }
+  .is-grid-layout .slot-6 { bottom: 10%; right: 4%; }
+  
+  .africa-art-stamp { width: 80px; height: 80px; right: 4%; bottom: 6%; }
+  .africa-art-stamp span { font-size: 0.92rem; }
+  .africa-art-stamp small { display: none; }
 }
 
 @media (max-width: 560px) {
-  .africa-canvas { height: 175svh; }
+  .africa-canvas { height: 185svh; }
   .africa-canvas-sticky { min-height: 640px; }
   .africa-canvas-frame { width: 96%; height: calc(100% - 1rem); min-height: 620px; }
   .africa-canvas-topline, .africa-canvas-bottomline { left: .9rem; right: .9rem; font-size: .52rem; letter-spacing: .08em; }
-  .africa-canvas-copy { top: 10%; left: 1.2rem; width: 85%; }
-  .africa-canvas-copy h2 { font-size: clamp(2.6rem, 11vw, 4.2rem); }
-  .africa-canvas-copy > p:not(.africa-canvas-kicker) { max-width: 19rem; font-size: .88rem; margin-block: .8rem; }
-  .africa-canvas-link { margin-top: .2rem; }
+  .africa-canvas-copy { top: 9%; left: 1rem; width: 90%; }
+  .africa-canvas-copy h2 { font-size: clamp(2.3rem, 10vw, 3.8rem); }
+  .africa-canvas-copy > p:not(.africa-canvas-kicker) { max-width: 20rem; font-size: .84rem; margin-block: .6rem; }
+  .curator-btn-group { gap: 0.25rem; }
+  .curator-btn { padding: 0.25rem 0.55rem; font-size: 0.68rem; }
+  .africa-canvas-link { margin-top: .1rem; }
   .africa-art figcaption { left: .5rem; bottom: .5rem; font-size: .54rem; }
   .africa-art figcaption span { margin-right: .25rem; }
+  .quote-shape-left, .quote-shape-right { display: none; }
+  .quote-band-enhanced { grid-template-columns: 1fr; padding: 1.8rem 1.4rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

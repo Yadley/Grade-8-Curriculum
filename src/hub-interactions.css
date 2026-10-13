@@ -390,3 +390,195 @@
   .hero-cinematic .hero-video, .contributor-card, .contributor-photo-note { transition: none !important; }
   .contributor-card:hover { transform: none; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   HERO SHAPES CONSTELLATION & KICKER
+   ═══════════════════════════════════════════════════════════════════ */
+.hero-shape-constellation {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+}
+.hero-shape-float {
+  position: absolute; opacity: 0.18; mix-blend-mode: screen; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+.shape-float-1 {
+  top: 15%; right: 10%; width: clamp(80px, 12vw, 160px); transform: rotate(18deg);
+  animation: float-slow 12s ease-in-out infinite alternate;
+}
+.shape-float-2 {
+  top: 45%; right: 4%; width: clamp(50px, 8vw, 100px); transform: rotate(-15deg);
+  animation: float-slow 9s ease-in-out infinite alternate-reverse;
+}
+@keyframes float-slow {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-16px) rotate(8deg); }
+}
+
+.hero-kicker-group {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+.hero-kicker-glyph {
+  display: grid; place-items: center; width: 1.1rem; height: 1.1rem;
+}
+.hero-kicker-glyph img {
+  width: 100%; height: 100%; filter: invert(1);
+}
+
+/* ── Model Shape Badge in Pedagogical Toolkit ── */
+.model-head-row {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;
+}
+.model-shape-badge {
+  width: 1.8rem; height: 1.8rem; display: grid; place-items: center;
+  border-radius: 6px; background: var(--color-mist); padding: 0.3rem;
+  transition: transform 220ms ease, background-color 220ms ease;
+}
+.model:hover .model-shape-badge {
+  transform: rotate(8deg) scale(1.1);
+  background: var(--color-sun);
+}
+.model-shape-badge img {
+  width: 100%; height: 100%;
+}
+
+/* ── Empty Corpus State ── */
+.empty-corpus-state {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 4rem 1.5rem;
+  background: var(--color-mist); border-radius: var(--radius-xl);
+  border: 1px dashed var(--color-line); margin: 2rem 0;
+}
+.empty-corpus-graphic {
+  position: relative; width: 120px; height: 120px; margin-bottom: 1.5rem;
+  display: grid; place-items: center;
+}
+.empty-map {
+  width: 100%; height: 100%; opacity: 0.2; filter: grayscale(1);
+}
+.empty-glyph {
+  position: absolute; width: 32px; height: 32px; opacity: 0.8;
+}
+.empty-corpus-state h3 {
+  font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 0.5rem;
+  color: var(--color-forest);
+}
+.empty-corpus-state p {
+  color: var(--color-muted); max-width: 28rem; margin: 0 0 1.5rem; font-size: 0.95rem;
+}
+
+/* ── Framed QR Card in Digital Access ── */
+.qr-card-framed {
+  position: relative; overflow: visible;
+}
+.qr-corner {
+  position: absolute; width: 2.2rem; height: 2.2rem; pointer-events: none; opacity: 0.35;
+}
+.qr-corner-tl {
+  top: -8px; left: -8px;
+}
+.qr-corner-br {
+  bottom: -8px; right: -8px; transform: rotate(180deg);
+}
+.qr-corner img {
+  width: 100%; height: 100%;
+}
+.qr-badge {
+  display: inline-block; margin-top: 0.8rem;
+  font-family: var(--font-kicker); font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-jade);
+}
+
+/* ── Enhanced Site Footer ── */
+.site-footer {
+  position: relative;
+  background: var(--color-deep);
+  color: var(--color-canvas);
+  padding: 0;
+  border-top: none;
+}
+.footer-woven-stripe {
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-coral) 0 20px,
+    var(--color-sun) 20px 40px,
+    var(--color-jade) 40px 60px,
+    var(--color-canvas) 60px 80px
+  );
+}
+.footer-content {
+  padding: clamp(3rem, 6vw, 5rem) 1.5rem clamp(2.5rem, 5vw, 4rem);
+}
+.footer-top-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem;
+  padding-bottom: 2.5rem; border-bottom: 1px solid rgb(245 240 230 / 14%);
+}
+.footer-brand-col {
+  max-width: 32rem;
+}
+.footer-mark-group {
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;
+}
+.footer-shape-mark {
+  width: 2.8rem; height: 2.8rem; display: grid; place-items: center;
+  background: var(--color-forest); border: 1.5px solid var(--color-sun);
+  border-radius: 10px; padding: 0.35rem;
+}
+.footer-shape-mark img {
+  width: 100%; height: 100%; filter: invert(1);
+}
+.footer-mark-group strong {
+  display: block; font-family: var(--font-display); font-size: 1.45rem;
+  letter-spacing: -0.02em; color: var(--color-canvas);
+}
+.footer-tagline {
+  display: block; font-family: var(--font-kicker); font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.06em; color: var(--color-sun);
+  text-transform: uppercase; margin-top: 0.15rem;
+}
+.footer-desc {
+  margin: 0; color: rgb(245 240 230 / 74%); font-size: 0.9rem; line-height: 1.6;
+}
+.footer-meta-col {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 1.2rem;
+}
+.footer-shapes-row {
+  display: flex; gap: 0.75rem; align-items: center;
+}
+.footer-shapes-row img {
+  width: 1.4rem; height: 1.4rem; opacity: 0.65; filter: invert(1);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.footer-shapes-row img:hover {
+  opacity: 1; transform: scale(1.15);
+}
+.footer-back-to-top {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 1.1rem; border-radius: 999px;
+  background: rgba(245 240 230 / 10%); border: 1px solid rgba(245 240 230 / 22%);
+  color: var(--color-canvas); font-family: var(--font-kicker);
+  font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; cursor: pointer; transition: all 200ms ease;
+}
+.footer-back-to-top:hover {
+  background: var(--color-sun); color: var(--color-forest);
+  border-color: var(--color-sun); transform: translateY(-2px);
+}
+.footer-bottom-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.8rem;
+}
+.footer-label {
+  display: block; font-family: var(--font-kicker); font-size: 0.68rem;
+  font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--color-coral); margin-bottom: 0.35rem;
+}
+.footer-bottom-grid p {
+  margin: 0; color: rgb(245 240 230 / 72%); font-size: 0.86rem; line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .footer-meta-col { align-items: flex-start; }
+}
+

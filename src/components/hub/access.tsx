@@ -13,7 +13,7 @@ export function Access() {
       type: "svg",
       margin: 1,
       width: 196,
-      color: { dark: "#1e4d2b", light: "#fbf6ee" },
+      color: { dark: "#123F2B", light: "#F5F0E6" },
     })
       .then((svg) => setMarkup(svg))
       .catch(() => setMessage("The code could not be drawn. Copy the link instead."));
@@ -32,17 +32,23 @@ export function Access() {
       area.remove();
     }
     setCopied(true);
+    setTimeout(() => setCopied(false), 3000);
   }
 
   return (
     <section className="block band" id="access" aria-labelledby="access-title">
       <div className="wrap access-grid">
         <div>
-          <p className="kicker">Digital access</p>
-          <h2 id="access-title" className="section-title">
+          <div className="kicker-group">
+            <span className="kicker-shape" aria-hidden="true">
+              <img src="/images/Shapes/African Shape (4).svg" alt="" style={{ filter: "invert(1)" }} />
+            </span>
+            <p className="kicker" style={{ color: "var(--color-sun)" }}>Digital access</p>
+          </div>
+          <h2 id="access-title" className="section-title" style={{ color: "var(--color-canvas)" }}>
             Take the shelf into the room.
           </h2>
-          <p className="lede">
+          <p className="lede" style={{ color: "rgb(245 240 230 / 84%)" }}>
             Download the teacher pack, or let a phone scan the card. The pack holds every
             dossier, the selection criteria, and the 50-minute clock. The poems and stories
             stay with their authors. You bring the licensed copy.
@@ -53,7 +59,7 @@ export function Access() {
               className="btn btn-paper"
               onClick={() => downloadText("african-literature-grade8-teacher-pack.txt", teacherPack())}
             >
-              Download the teacher pack
+              Download teacher pack
             </button>
             <button
               type="button"
@@ -66,11 +72,20 @@ export function Access() {
               Print the pack
             </button>
             <button type="button" className="btn btn-paper" onClick={copyLink}>
-              {copied ? "Link copied" : "Copy page link"}
+              {copied ? "Link copied ✓" : "Copy page link"}
             </button>
           </div>
         </div>
-        <div className="qr-card">
+
+        {/* QR Card with African Geometric Frame */}
+        <div className="qr-card qr-card-framed">
+          <div className="qr-corner qr-corner-tl" aria-hidden="true">
+            <img src="/images/Shapes/African Shape (2).svg" alt="" />
+          </div>
+          <div className="qr-corner qr-corner-br" aria-hidden="true">
+            <img src="/images/Shapes/African Shape (1).svg" alt="" />
+          </div>
+
           <div
             className="qr-svg"
             role="img"
@@ -78,6 +93,7 @@ export function Access() {
             dangerouslySetInnerHTML={markup ? { __html: markup } : undefined}
           />
           <p>{message}</p>
+          <span className="qr-badge">Grade 8 African Literature Hub · MMSU</span>
         </div>
       </div>
     </section>

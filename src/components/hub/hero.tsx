@@ -37,24 +37,64 @@ export function Hero() {
       cancelAnimationFrame(frame);
     };
   }, []);
+
   return (
     <section className="hero hero-cinematic" id="top" aria-labelledby="hero-title">
       <div className="hero-scene" aria-hidden="true">
         <img src="/images/african-youth.jpg" alt="" width={1600} height={1067} />
-        <video className={videoReady ? "hero-video is-ready" : "hero-video"} autoPlay muted loop playsInline preload="metadata" poster="/images/african-youth.jpg" onCanPlay={() => setVideoReady(true)} onError={(event) => { event.currentTarget.style.display = "none"; }} tabIndex={-1}>
+        <video
+          className={videoReady ? "hero-video is-ready" : "hero-video"}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/images/african-youth.jpg"
+          onCanPlay={() => setVideoReady(true)}
+          onError={(event) => { event.currentTarget.style.display = "none"; }}
+          tabIndex={-1}
+        >
           <source src="/images/african-literature-hero.mp4" type="video/mp4" />
         </video>
-      </div>
-      <div className="wrap hero-content">
-        <p className="kicker hero-kicker">MMSU Graduate School · Laoag City</p>
-        <h1 id="hero-title" className="display">African literature, <em>opened</em> for class.</h1>
-        <p className="hero-lede">Ten literary works. Real classroom strategies. A bridge between the worlds inside a text and the questions Grade 8 readers bring with them.</p>
-        <div className="actions">
-          <a className="btn btn-primary" href="#corpus">Explore the collection <span aria-hidden="true">↗</span></a>
-          <a className="btn btn-ghost hero-ghost" href="#toolkits">Explore the lesson guide <span aria-hidden="true">◷</span></a>
+
+        {/* Ambient African Shape Constellation in Hero */}
+        <div className="hero-shape-constellation" aria-hidden="true">
+          <div className="hero-shape-float shape-float-1">
+            <img src="/images/Shapes/African Shape (2).svg" alt="" />
+          </div>
+          <div className="hero-shape-float shape-float-2">
+            <img src="/images/Shapes/African Shape (1).svg" alt="" />
+          </div>
         </div>
-        <p className="hero-footnote">Supplementary resources for Grade 8 English · Revised K to 10 Curriculum</p>
       </div>
+
+      <div className="wrap hero-content">
+        <div className="kicker-group hero-kicker-group">
+          <span className="hero-kicker-glyph" aria-hidden="true">
+            <img src="/images/Shapes/African Shape (1).svg" alt="" />
+          </span>
+          <p className="kicker hero-kicker">MMSU Graduate School · Laoag City</p>
+        </div>
+        <h1 id="hero-title" className="display">
+          African literature, <em>opened</em> for class.
+        </h1>
+        <p className="hero-lede">
+          Ten literary works. Real classroom strategies. A bridge between the worlds inside a
+          text and the questions Grade 8 readers bring with them.
+        </p>
+        <div className="actions">
+          <a className="btn btn-primary" href="#corpus">
+            Explore the collection <span aria-hidden="true">↗</span>
+          </a>
+          <a className="btn btn-ghost hero-ghost" href="#toolkits">
+            Explore the lesson guide <span aria-hidden="true">◷</span>
+          </a>
+        </div>
+        <p className="hero-footnote">
+          Supplementary resources for Grade 8 English · Revised K to 10 Curriculum
+        </p>
+      </div>
+
       <div className="wrap stats" aria-label="Hub at a glance">
         <p className="stat">
           <span className="stat-overline">The collection</span>

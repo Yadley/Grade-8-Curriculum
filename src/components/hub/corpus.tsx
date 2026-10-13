@@ -24,10 +24,15 @@ export function Corpus() {
   const open = works.find((work) => work.id === openId) ?? null;
 
   return (
-    <section className="block" id="corpus" aria-labelledby="corpus-title">
+    <section className="block corpus-block" id="corpus" aria-labelledby="corpus-title">
       <div className="shelf-band">
         <div className="wrap shelf-band-head">
-          <p className="kicker">The shelf</p>
+          <div className="kicker-group">
+            <span className="kicker-shape" aria-hidden="true">
+              <img src="/images/Shapes/African Shape (2).svg" alt="" />
+            </span>
+            <p className="kicker">The shelf</p>
+          </div>
           <p>Drag sideways on a phone. On a larger screen the books drift — pause by hovering.</p>
         </div>
         <div className="rail-window" data-lenis-prevent-touch>
@@ -55,16 +60,25 @@ export function Corpus() {
           </div>
         </div>
       </div>
+
       <div className="wrap">
         <div className="block-head">
-          <p className="kicker">Literary corpus</p>
+          <div className="kicker-group">
+            <span className="kicker-shape" aria-hidden="true">
+              <img src="/images/Shapes/African Shape (1).svg" alt="" />
+            </span>
+            <p className="kicker">Literary corpus</p>
+          </div>
           <h2 id="corpus-title" className="section-title">
             Ten literary pieces. Explore the corpus.
           </h2>
           <p className="lede">
-            Five poems, two short stories, one critical essay, and two speculative fiction works, as listed in the thesis inventory. Open a dossier for context, vocabulary, a classroom bridge, and discussion prompts.
+            Five poems, two short stories, one critical essay, and two speculative fiction works, as
+            listed in the thesis inventory. Open a dossier for context, vocabulary, a classroom
+            bridge, and discussion prompts.
           </p>
         </div>
+
         <div className="toolbar">
           <label className="lbl">
             Search by title, author, or country
@@ -97,8 +111,26 @@ export function Corpus() {
             Showing {visible.length} of {works.length}
           </p>
         </div>
+
         {visible.length === 0 ? (
-          <p className="empty">No work matches that search. Try a country, an author, or clear the genre.</p>
+          <div className="empty-corpus-state">
+            <div className="empty-corpus-graphic" aria-hidden="true">
+              <img src="/images/Shapes/Africa.svg" alt="" className="empty-map" />
+              <img src="/images/Shapes/African Shape (1).svg" alt="" className="empty-glyph" />
+            </div>
+            <h3>No literary piece matches that search</h3>
+            <p>Try searching for a country (e.g. Nigeria, Zimbabwe, Kenya), an author, or reset the genre filter.</p>
+            <button
+              type="button"
+              className="btn btn-ghost"
+              onClick={() => {
+                setQuery("");
+                setGenre("All");
+              }}
+            >
+              Reset filters
+            </button>
+          </div>
         ) : (
           <div className="shelf" key={`${genre}-${needle}`}>
             {visible.map((work) => (
@@ -114,10 +146,15 @@ export function Corpus() {
             ))}
           </div>
         )}
+
         <p className="fine shelf-note">
-          The covers are original visual labels, not publisher covers or reproductions of the literary texts. Displayed years follow the thesis inventory; verify publication details against the authorized edition and bibliography before teaching, especially where the thesis draft gives conflicting dates.
+          The covers are original visual labels, not publisher covers or reproductions of the
+          literary texts. Displayed years follow the thesis inventory; verify publication details
+          against the authorized edition and bibliography before teaching, especially where the
+          thesis draft gives conflicting dates.
         </p>
       </div>
+
       <Dossier work={open} onClose={() => setOpenId(null)} />
     </section>
   );
