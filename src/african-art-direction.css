@@ -128,3 +128,156 @@ html { scroll-padding-top: 5rem; }
   .africa-art, .africa-art img { transform: none !important; }
   .pillar, .cover img { transition: none !important; }
 }
+
+
+/* Reference-led refinement: poster geometry, tactile print, and a clearer scroll cue. */
+:root {
+  --art-ink: #171713;
+  --art-cream: #f7f0df;
+  --art-jade: #24613e;
+  --art-coral: #e15a3a;
+  --art-cyan: #20c8cf;
+}
+.site-header {
+  background-image: linear-gradient(90deg, rgb(36 97 62 / 98%), rgb(36 97 62 / 94%));
+}
+.site-header .rail {
+  background: repeating-linear-gradient(90deg, var(--art-ochre) 0 28px, var(--art-coral) 28px 42px, var(--art-cream) 42px 49px, var(--art-ochre) 49px 70px);
+}
+.hero-cinematic .hero-scene::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  opacity: .15;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 38px, rgb(247 240 223 / 25%) 38px 40px, transparent 40px 78px),
+    repeating-linear-gradient(45deg, transparent 0 58px, rgb(228 167 47 / 22%) 58px 61px, transparent 61px 116px);
+  mix-blend-mode: screen;
+}
+.hero-cinematic .hero-content {
+  position: relative;
+}
+.hero-cinematic .hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+}
+.hero-cinematic .hero-kicker::before {
+  content: "";
+  width: 2.25rem;
+  height: 3px;
+  background: var(--art-coral);
+}
+.hero-cinematic .display {
+  max-width: 9.2ch;
+  text-wrap: balance;
+}
+.hero-cinematic .display em {
+  text-shadow: 0 0 42px rgb(228 167 47 / 15%);
+}
+.hero-cinematic .stats {
+  position: relative;
+  overflow: hidden;
+}
+.hero-cinematic .stats::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: repeating-linear-gradient(180deg, var(--art-ochre) 0 18px, var(--art-coral) 18px 28px, var(--art-cream) 28px 34px);
+}
+.hero-cinematic .stat {
+  position: relative;
+}
+.hero-cinematic .stat + .stat {
+  border-left: 1px solid rgb(251 246 238 / 14%);
+}
+.africa-canvas-frame {
+  box-shadow: 0 28px 100px rgb(0 0 0 / 35%);
+}
+.africa-canvas-frame::after {
+  content: "";
+  position: absolute;
+  z-index: 7;
+  inset: auto 0 0;
+  height: 4px;
+  background: var(--art-ochre);
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left center;
+  pointer-events: none;
+}
+.africa-canvas-texture {
+  opacity: .34;
+  background-image:
+    repeating-linear-gradient(45deg, transparent 0 17px, rgb(228 167 47 / 20%) 17px 19px, transparent 19px 37px),
+    repeating-linear-gradient(135deg, transparent 0 35px, rgb(251 246 238 / 10%) 35px 37px, transparent 37px 72px),
+    radial-gradient(ellipse at 80% 20%, rgb(216 74 47 / 44%), transparent 40%);
+}
+.africa-art {
+  outline: 1px solid rgb(251 246 238 / 18%);
+  outline-offset: -1px;
+}
+.africa-art::after {
+  background: linear-gradient(0deg, rgb(20 20 15 / 72%), transparent 48%), linear-gradient(135deg, rgb(36 97 62 / 10%), transparent 55%);
+}
+.africa-art-stamp {
+  border: 2px solid var(--art-cream);
+  background: var(--art-coral);
+}
+.pillars {
+  position: relative;
+}
+.pillars::after {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  width: 5.5rem;
+  height: 5.5rem;
+  pointer-events: none;
+  opacity: .9;
+  background:
+    linear-gradient(45deg, transparent 44%, var(--art-coral) 45% 55%, transparent 56%),
+    linear-gradient(-45deg, transparent 44%, var(--art-ochre) 45% 55%, transparent 56%);
+}
+.quote-band {
+  overflow: hidden;
+  isolation: isolate;
+}
+.quote-band::before,
+.quote-band::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: clamp(6rem, 15vw, 14rem);
+  aspect-ratio: 1;
+  border: clamp(8px, 1.6vw, 18px) solid rgb(25 25 20 / 12%);
+  transform: rotate(45deg);
+}
+.quote-band::before { left: -4rem; top: -4rem; }
+.quote-band::after { right: -4rem; bottom: -4rem; }
+.shelf-band {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 90% 20%, rgb(251 246 238 / 10%) 0 2px, transparent 3px 100%),
+    repeating-linear-gradient(135deg, transparent 0 28px, rgb(25 25 20 / 6%) 28px 30px, transparent 30px 58px),
+    var(--art-vermilion);
+}
+@media (max-width: 760px) {
+  .hero-cinematic .stat + .stat { border-left: 0; border-top: 1px solid rgb(251 246 238 / 14%); }
+  .africa-canvas-copy { top: 9%; }
+  .africa-canvas-copy h2 { font-size: clamp(2.45rem, 10.2vw, 3.8rem); }
+  .africa-canvas-copy > p:not(.africa-canvas-kicker) { max-width: 20rem; font-size: .92rem; }
+  .africa-canvas-link { margin-top: .2rem; }
+  .africa-canvas-topline, .africa-canvas-bottomline { left: .8rem; right: .8rem; }
+  .africa-art figcaption { left: .55rem; bottom: .55rem; font-size: .57rem; }
+  .africa-art figcaption span { margin-right: .3rem; }
+  .pillars::after { top: -1.8rem; width: 3.2rem; height: 3.2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cinematic .hero-scene > img { animation: none !important; }
+  .africa-canvas-frame::after { transform: none; }
+}
