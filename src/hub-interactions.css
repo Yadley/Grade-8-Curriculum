@@ -1,0 +1,212 @@
+/* Editorial interaction polish for the literature hub. Keep motion light and respect reduced-motion preferences. */
+
+.hero-fig {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-fig::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 34%;
+  background: linear-gradient(180deg, rgb(28 25 23 / 24%), transparent);
+  pointer-events: none;
+}
+
+.hero-fig img {
+  transition: transform 800ms cubic-bezier(0.22, 1, 0.36, 1), filter 400ms ease;
+}
+
+.hero-fig:hover img {
+  filter: saturate(1.06);
+}
+
+.hero-fig-stamp {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  max-width: calc(100% - 2rem);
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgb(251 246 238 / 42%);
+  border-radius: 999px;
+  background: rgb(28 25 23 / 72%);
+  color: #fbf6ee;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.hero-fig-stamp::before {
+  content: "";
+  width: 0.42rem;
+  height: 0.42rem;
+  flex: none;
+  border-radius: 50%;
+  background: #f0d8c4;
+  box-shadow: 0 0 0 3px rgb(240 216 196 / 18%);
+}
+
+.hero-fig figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.hero-fig figcaption::before {
+  content: "↗";
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  border-radius: 50%;
+  background: var(--color-mist);
+  color: var(--color-forest);
+  font-weight: 700;
+}
+
+.hero-rest .actions .btn {
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), background-color 180ms ease, box-shadow 220ms ease;
+}
+
+.hero-rest .actions .btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-rest .actions .btn-primary:hover {
+  box-shadow: 0 8px 20px rgb(30 77 43 / 18%);
+}
+
+.stat {
+  border-radius: 0.75rem;
+  transition: background-color 220ms ease, padding-left 220ms ease;
+}
+
+.stats .stat:hover {
+  background: color-mix(in srgb, var(--color-sheet) 64%, transparent);
+  padding-left: 0.65rem;
+}
+
+.book:focus-visible,
+.rail-book:focus-visible {
+  outline-offset: 5px;
+  border-radius: var(--radius-sm);
+}
+
+.cover {
+  transition: box-shadow 350ms ease, border-radius 350ms ease;
+}
+
+.book:hover .cover,
+.book:focus-visible .cover {
+  box-shadow:
+    0 20px 36px color-mix(in srgb, var(--color-ink) 22%, transparent),
+    inset 11px 0 12px color-mix(in srgb, black 22%, transparent);
+}
+
+.chip {
+  transition: transform 180ms ease, background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+}
+
+.clock-progress {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.35rem 0 0.6rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-mist);
+}
+
+.clock-progress-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
+}
+
+.clock-progress-top strong {
+  font-size: 0.98rem;
+  letter-spacing: -0.02em;
+}
+
+.clock-progress-top span {
+  color: var(--color-forest);
+  font-size: 0.86rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.clock-progress-track {
+  height: 0.42rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-forest) 14%, white);
+}
+
+.clock-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-forest);
+  transition: width 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.clock-item {
+  position: relative;
+  transition: background-color 220ms ease, padding-inline 220ms ease;
+}
+
+.clock-item[aria-expanded="true"] {
+  padding-inline: 0.85rem;
+  background: color-mix(in srgb, var(--color-sheet) 62%, transparent);
+  border-radius: var(--radius-sm);
+}
+
+.clock-item[aria-expanded="true"] .clock-top b {
+  color: var(--color-forest);
+}
+
+.clock-item:focus-visible {
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fig img,
+  .hero-rest .actions .btn,
+  .stat,
+  .cover,
+  .chip,
+  .clock-progress-fill,
+  .clock-item {
+    transition: none !important;
+  }
+
+  .hero-fig:hover img,
+  .hero-rest .actions .btn:hover,
+  .chip:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-fig-stamp {
+    top: 0.7rem;
+    left: 0.7rem;
+    font-size: 0.64rem;
+  }
+
+  .clock-progress {
+    padding: 0.85rem;
+  }
+}
