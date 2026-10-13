@@ -1,0 +1,109 @@
+Product Requirements Document (PRD)
+Project Title: African Literature Digital Repository & Supplementary Resource Hub
+Thesis Project: Grade 8 English Teachers’ Literary Selections, Strategies and Challenges in Teaching African Literature: Inputs for Supplementary Based Materials
+Researcher: Tarisai Tara Mabuto, MAEd Candidate (Language and Literature), Mariano Marcos State University
+Advisory Committee Chair: Romel A. Pascua, Ph.D.
+Target Delivery Date: October 13, 2026 (Live Landing Page MVP)
+Primary Platform: Responsive Web Landing Page (Google Sites / Webflow / Static HTML via GitHub Pages)
+1. Executive Summary & Purpose
+The African Literature Digital Repository serves as the developmental output and supplementary instructional artifact mandated by the thesis title suffix, "Inputs for Supplementary Based Materials." The website provides Grade 8 English secondary educators in the Schools Division of Laoag City (and across the Philippines) with an open-access, curriculum-aligned repository.
+The hub hosts a curated 10-piece African literary corpus—balanced across gender (feminism/masculinity), geographic regions, historical eras, and non-racial themes—alongside ready-to-download Lesson Exemplars, vocabulary-unlocking scaffolds, and pedagogical strategy matrices based on the Carter & Long models under the Revised K to 10 Curriculum.
+2. Target Audience & Personas
+ * Primary Users: Grade 8 English Public Secondary High School Teachers in Laoag City implementing Afro-Asian literature.
+   * Pain Points Addressed: Severe shortage of curriculum-aligned learning packages, lack of contextual background for African literature, out-of-pocket printing expenses, and limited class periods (45–60 mins).
+ * Secondary Users: Secondary Head Teachers, Master Teachers, English Department Coordinators, and Curriculum Evaluators.
+ * Tertiary Users: Graduate Advisory Committee (Dr. Romel Pascua, Dr. Winicel May Ancheta, Dr. Jahnese Asuncion, Prof. Jeanette Dials) assessing academic deliverables and developmental validity.
+3. Product Goals & Core Objectives
+ * Host Curated Corpus: Provide complete, accessible texts or annotated excerpts for the 10 selected African literary pieces across 5 distinct genres (5 poems, 2 short stories, 1 essay, 1 novel, 1 speculative fiction).
+ * Explicit Selection Criteria: Document the pedagogical, thematic, and developmental rationale governing text selection for Philippine secondary learners.
+ * Instructional Support: Provide downloadable lesson exemplars, graphic organizers, and pre-reading vocabulary tasks mapped to the Carter & Long literature teaching models.
+ * Intercultural Bridging: Explicitly connect African sociocultural dynamics to Filipino communal values, family structures, and lived realities.
+ * Strict Curricular Compliance: Align strictly with the Revised K to 10 Curriculum guidelines without any obsolete or prohibited terminology.
+4. Curated Literary Corpus Architecture (10 Works)
+| Piece # | Genre | Title | Author & Country | Era & Region | Thematic / Representation Lens |
+|---|---|---|---|---|---|
+| 01 | Poem 1 | Africa | David Diop (Senegal) | Traditional / Modern transition (West Africa) | Masculinity & Cultural Identity: Ancestral roots, resilience against subjugation, national pride. |
+| 02 | Poem 2 | Telephone Conversation | Wole Soyinka (Nigeria) | Modern Classic (West Africa) | Social Critique & Wit: Intellectual satire dismantling prejudice through sophisticated language. |
+| 03 | Poem 3 | Water | Koleka Putuma (South Africa) | Contemporary (Southern Africa) | Feminism & Historical Memory: Female agency examining access, collective memory, and postcolonial justice. |
+| 04 | Poem 4 | Home | Warsan Shire (Somalia) | Contemporary (East Africa) | Empathy & Migration: Humanizing displacement, refuge, and family survival. |
+| 05 | Poem 5 | The Careless Seamstress | Tjawangwa Dema (Botswana) | Contemporary (Southern Africa) | Feminism & Labor: Women’s craftsmanship, self-definition, and subverting domestic constraints. |
+| 06 | Short Story 1 | The Hands of the Blacks | Luis Bernardo Honwana (Mozambique) | Modern (Southern/East Africa) | Masculinity & Parable: Paternal and maternal dialogue on equality, human dignity, and moral growth. |
+| 07 | Short Story 2 | Hitting Budapest | NoViolet Bulawayo (Zimbabwe) | Contemporary (Southern Africa) | Youth & Socioeconomic Contrast: Childhood camaraderie, socioeconomic realities, and coming-of-age. |
+| 08 | Critical Essay | How to Write About Africa | Binyavanga Wainaina (Kenya) | Contemporary (East Africa) | Media Literacy & Satire: Deconstructing monolithic tropes, exoticism, and superficial media framing. |
+| 09 | Novel (Excerpt) | Things Fall Apart (Ch. 2/3 Excerpt) | Chinua Achebe (Nigeria) | Modern Foundational (West Africa) | Traditional Governance & Complex Masculinity: Igbo societal norms, fatherhood, fear of failure, and communal obligations. |
+| 10 | Speculative Fiction | Spider the Artist | Nnedi Okorafor (Nigeria) | Contemporary Afrofuturism (West Africa) | Feminism & Ecological Tech: Female protagonist utilizing artistry, music, and ingenuity against corporate automated encroachment. |
+5. Information Architecture & Page Structure
+The product will deploy as a single-page landing site with sticky navigation and clear anchor jumps:
+[HEADER / NAVIGATION BAR]
+  • Home / Overview
+  • Selection Criteria
+  • Literary Corpus
+  • Pedagogical Toolkits
+  • About the Study
+
+[HERO SECTION]
+  • Title: African Literature Resource Hub for Grade 8 English
+  • Subtitle: Supplementary Instructional Packages for the Revised K to 10 Curriculum
+  • CTAs: "Explore 10 Curated Selections" | "Download Lesson Exemplars"
+
+[SECTION 1: CURRICULAR RATIONALE & SELECTION CRITERIA]
+  • Pillar 1: Thematic Diversity & Non-Racial Breadth
+  • Pillar 2: Balanced Gender Portrayal (Feminism & Masculinity)
+  • Pillar 3: Canonical & Chronological Continuity (Traditional, Modern, Contemporary)
+  • Pillar 4: Developmental & Lexical Readability for Philippine Public High Schools
+  • Pillar 5: Intercultural Bridging to Filipino Sociocultural Contexts
+
+[SECTION 2: THE CURATED REPOSITORY (FILTERABLE CORPUS GRID)]
+  • Category Filter: [All] [Poetry] [Short Stories] [Critical Essay] [Novel] [Speculative Fiction]
+  • Card UI: Title, Author, Country/Region, Era, Theme Tags, "Read Text / View Scaffolds" Button
+
+[SECTION 3: INSTRUCTIONAL TOOLKIT & CARTER & LONG PEDAGOGICAL SCAFFOLDS]
+  • Carter & Long 6-Model Strategy Matrix (Downloadable PDF/DOCX)
+  • Scaffolding Resources:
+      - Lexical & Paraphrastic Vocabulary Unlockers
+      - Intercultural Comparative Graphic Organizers (African vs. Filipino Realities)
+      - Formative Contextual Assessment Rubrics
+
+[SECTION 4: DIGITAL ACCESS & QR DOWNLOADS]
+  • One-Click ZIP / Google Drive Bundle containing all 10 text copies and lesson packages
+  • Mobile-optimized QR Code for instant classroom smartphone access
+
+[FOOTER & RESEARCH METADATA]
+  • Researcher: Tarisai Tara Mabuto (MAEd Language and Literature)
+  • MMSU Graduate School, Laoag City
+  • Advisory Chair: Romel A. Pascua, Ph.D.
+  • Compliance Notice: Republic Act No. 10173 (Data Privacy Act) & DepEd Revised K to 10 Guidelines
+
+6. Functional & Non-Functional Requirements
+6.1 Functional Requirements
+ * Text Previews & Modals: Clicking any literary piece opens a modal or sub-panel displaying the author biography, historical context, full text/approved excerpt, and core vocabulary terms.
+ * Direct Asset Downloads: Functional download links for PDF and Word format Lesson Exemplars and Graphic Organizers.
+ * Responsive Filtering: Instant JavaScript/tag-based filtering on the literary grid by genre (Poetry, Short Story, Essay, Novel, Speculative).
+ * Feedback / Contact Form: Embedded lightweight form for teachers to submit comments on classroom usability.
+6.2 Non-Functional Requirements
+ * Mobile Responsiveness: Flawless rendering on mobile devices (Android/iOS) given that Philippine teachers frequently access materials via smartphones.
+ * Low-Bandwidth Optimization: Fast loading speeds (< 2 seconds) even under standard 3G/4G public school connections; images compressed in WebP format; clean vector SVG icons.
+ * Strict Terminology Guardrails: 100% adherence to the directive to exclude prohibited terms; all curriculum alignments must reference the Revised K to 10 Curriculum.
+ * Accessibility: High-contrast color scheme adhering to WCAG 2.1 AA standards; legible typography (inter/system sans-serif fonts).
+7. Visual Design & Style System
+ * Color Palette:
+   * Primary Brand: Terracotta Ochre (#C85A17) — reflective of African earth and cultural heritage.
+   * Secondary Accent: Deep Forest Green (#1E4D2B) — symbolizing ecological vitality and growth.
+   * Neutral Background: Off-White / Sand (#FDFBF7) — easy on the eyes for extended reading.
+   * Typography Base: Charcoal (#222222) for primary body text; Warm Grey (#555555) for metadata.
+ * Typography Hierarchy:
+   * Headings: Serif with character (e.g., Merriweather or Playfair Display) for literary authority.
+   * Body & UI: Clean Sans-Serif (e.g., Inter, Plus Jakarta Sans, or Roboto) for maximum legibility on mobile screens.
+8. Implementation & Deployment Plan (Today's Build)
+ * Phase 1: Setup & Skeleton Wireframe (Hour 1)
+   * Launch new Google Site or HTML/Tailwind project template.
+   * Configure responsive layout, navigation anchors, and typography palette.
+ * Phase 2: Content Population (Hours 2–3)
+   * Input the complete Selection Criteria text.
+   * Populate all 10 literary piece cards with complete metadata, author blurbs, and contextual summaries.
+ * Phase 3: Toolkit & Resource Integration (Hour 4)
+   * Embed downloadable placeholders/PDF links for Carter & Long lesson guides, vocabulary tasks, and graphic organizers.
+ * Phase 4: QA & Compliance Verification (Hour 5)
+   * Verify mobile responsiveness across viewport sizes.
+   * Conduct automated text audit to guarantee zero occurrences of prohibited curriculum terms.
+   * Publish live URL and generate high-resolution QR code for committee presentation.

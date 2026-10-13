@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "African Literature Hub · Grade 8 English",
+      "hasCanvas": false,
+      "bodyTextLen": 9456,
+      "bodyTextHash": "1b814abcf99d143db340a6d3b37b6855d56ec29c6fcb5d2d2b0c408bb361f9ef",
+      "bodyTextPrefix": "Skip to content A Literature Hub Grade 8 English Overview Criter",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "African Literature Hub · Grade 8 English",
+      "hasCanvas": false,
+      "bodyTextLen": 9060,
+      "bodyTextHash": "0078ed48d1e03ac6e3cf6fdf0da5f5ba495ce872e89f2034b67a891d7bcf3bdd",
+      "bodyTextPrefix": "Skip to content A Literature Hub Grade 8 English Open menu Overv",
+      "horizontalOverflow": true,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
