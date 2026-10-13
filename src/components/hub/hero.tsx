@@ -14,6 +14,7 @@ export function Hero() {
               width={1600}
               height={1067}
             />
+            <span className="hero-fig-stamp" aria-hidden="true">A field guide · 10 works</span>
             <figcaption>The room is only the doorway. The ten books are on the shelf below.</figcaption>
           </figure>
           <div className="hero-rest rise rise-4">
@@ -28,15 +29,15 @@ export function Hero() {
             </p>
             <div className="actions">
               <a className="btn btn-primary" href="#corpus">
-                Open the shelf
+                Open the shelf <span aria-hidden="true">↗</span>
               </a>
               <a className="btn btn-ghost" href="#toolkits">
-                See the lesson clock
+                See the lesson clock <span aria-hidden="true">◷</span>
               </a>
             </div>
           </div>
         </div>
-        <div className="stats">
+        <div className="stats" aria-label="Hub at a glance">
           <p className="stat">
             <b>10</b>
             <span>selected works</span>
@@ -51,7 +52,7 @@ export function Hero() {
           </p>
           <p className="stat">
             <b>3</b>
-            <span>Carter & Long models</span>
+            <span>Carter &amp; Long models</span>
           </p>
         </div>
       </div>
