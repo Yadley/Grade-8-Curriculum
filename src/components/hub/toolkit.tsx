@@ -154,7 +154,10 @@ export function Toolkit() {
                 <div className="model-top-row">
                   <span className="model-cite-tag">{model.cite}</span>
                   <div className="model-geometric-icon" title={meta.label} aria-hidden="true">
-                    <img src={meta.icon} alt="" />
+                    {idx % 4 === 0 && <AfroSemiCircle color={meta.color} size={28} rotation={180} />}
+                    {idx % 4 === 1 && <AfroTriangle color={meta.color} size={26} rotation={0} />}
+                    {idx % 4 === 2 && <AfroRectangle color={meta.color} width={28} height={18} />}
+                    {idx % 4 === 3 && <AfroChevron color={meta.color} size={26} />}
                   </div>
                 </div>
                 <h3>{model.name}</h3>

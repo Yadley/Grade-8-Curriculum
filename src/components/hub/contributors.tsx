@@ -102,7 +102,7 @@ export function Contributors() {
         <div className="block-head">
           <div className="kicker-group">
             <span className="kicker-shape" aria-hidden="true">
-              <img src="/images/Shapes/African Shape (3).svg" alt="" />
+              <AfroSemiCircle color="#F2C94C" size={26} rotation={180} />
             </span>
             <p className="kicker">The People Behind the Shelf</p>
           </div>
@@ -126,7 +126,12 @@ export function Contributors() {
             >
               {/* Geometric Corner Notch Accent */}
               <div className="card-afro-badge" aria-hidden="true">
-                <img src={person.shape} alt="" />
+                {index === 0 && <AfroTriangle color="#E0533C" size={20} rotation={15} />}
+                {index === 1 && <AfroSemiCircle color="#16845B" size={24} rotation={180} />}
+                {index === 2 && <AfroRectangle color="#F2C94C" width={24} height={15} />}
+                {index === 3 && <AfroChevron color="#16845B" size={20} />}
+                {index === 4 && <AfroTriangle color="#C44B2E" size={20} rotation={-45} />}
+                {index === 5 && <AfroSemiCircle color="#F2C94C" size={24} rotation={90} />}
               </div>
 
               <div
