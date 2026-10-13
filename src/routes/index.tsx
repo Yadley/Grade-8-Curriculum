@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/hub/header";
 import { Hero } from "@/components/hub/hero";
 import { Criteria } from "@/components/hub/criteria";
+import { AfricaCanvas } from "@/components/hub/africa-canvas";
 import { Corpus } from "@/components/hub/corpus";
 import { Toolkit } from "@/components/hub/toolkit";
 import { Access } from "@/components/hub/access";
@@ -19,6 +20,7 @@ function Home() {
       <main id="content">
         <Hero />
         <Criteria />
+        <AfricaCanvas />
         <Corpus />
         <Toolkit />
         <Access />

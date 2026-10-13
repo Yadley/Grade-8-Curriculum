@@ -3,35 +3,35 @@ const people = [
     name: "Tarisai Tara Mabuto",
     role: "Researcher · MAEd candidate, Language and Literature",
     initials: "TM",
-    image: "/images/contributors/tarisai-tara-mabuto.jpg",
+    image: "/images/Tara.jpg",
     kind: "Researcher",
   },
   {
     name: "Romel A. Pascua, Ph.D.",
     role: "Advisory committee chair",
     initials: "RP",
-    image: "/images/contributors/romel-a-pascua.jpg",
+    image: "/images/Romel A. Pascua.jpg",
     kind: "Advisory chair",
   },
   {
     name: "Winicel May Ancheta, Ph.D.",
     role: "Committee member",
     initials: "WA",
-    image: "/images/contributors/winicel-may-ancheta.jpg",
+    image: "/images/Winicel May Ancheta.jpg",
     kind: "Committee",
   },
   {
     name: "Jahnese Asuncion, Ph.D.",
     role: "Committee member",
     initials: "JA",
-    image: "/images/contributors/jahnese-asuncion.jpg",
+    image: "/images/Jahnese Asuncion.jpg",
     kind: "Committee",
   },
   {
     name: "Jeanette Dials",
     role: "Committee member",
     initials: "JD",
-    image: "/images/contributors/jeanette-dials.jpg",
+    image: "/images/Jeanette Dials.jpg",
     kind: "Committee",
   },
 ];
@@ -74,7 +74,7 @@ export function Contributors() {
             <p>Graduate School · Laoag City, Ilocos Norte, Philippines</p>
           </div>
         </div>
-        <p className="contributors-note">Portrait files belong in <code>public/images/contributors/</code>. Use photos supplied or approved by each person; the initials remain as a graceful fallback until portraits are added.</p>
+        <p className="contributors-note">Portraits supplied for this project are now included. Initials remain as a fallback if an image cannot load.</p>
       </div>
     </section>
   );
