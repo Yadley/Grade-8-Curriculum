@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from "react";
-import { committee, roles } from "@/data/hub";
+import { roles } from "@/data/hub";
 import { works } from "@/data/works";
 
 type Note = {
@@ -88,23 +88,6 @@ export function Study() {
           between bells. It is not the thesis manuscript, and it does not replace the Revised K
           to 10 curriculum guide.
         </p>
-        <div className="people">
-          <article className="person">
-            <b>Tarisai Tara Mabuto</b>
-            <span>Researcher · MAEd candidate, Language and Literature</span>
-          </article>
-          {committee.map((person) => (
-            <article key={person.name} className="person">
-              <b>{person.name}</b>
-              <span>{person.role}</span>
-            </article>
-          ))}
-          <article className="person">
-            <b>Mariano Marcos State University Graduate School</b>
-            <span>Laoag City</span>
-          </article>
-        </div>
-
         <form className="form-grid stack-lg" onSubmit={submit}>
           <div>
             <p className="kicker">Classroom note</p>
