@@ -66,7 +66,7 @@ export function Criteria() {
               Designed as an open-access supplementary resource, this hub provides secondary
               educators with award-winning contemporary poetry, prose, and speculative texts to enrich
               classroom instruction. These materials are intended to serve as practical pedagogical
-              companions—to be explored alongside the DepEd Revised K to 10 English Curriculum Guide,
+              companions, to be explored alongside the DepEd Revised K to 10 English Curriculum Guide,
               authorized school modules, and your local division instructional priorities.
             </p>
 
@@ -151,7 +151,7 @@ export function Criteria() {
 
                   {/* Tara's Portrait Image */}
                   <image
-                    href="/images/Tara.jpg"
+                    href="/images/Tara Full.jpg"
                     x="0"
                     y="0"
                     width="512"

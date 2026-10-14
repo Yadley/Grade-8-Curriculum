@@ -19,7 +19,7 @@ export function Header() {
       <div className="wrap header-bar">
         <a className="brand" href="#top">
           <span className="mark mark-logo"><img src="/images/mmsu-logo.png" alt="Mariano Marcos State University logo" /></span>
-          <span><span className="brand-name">Literature Hub</span><span className="brand-sub">Grade 8 English</span></span>
+          <span><span className="brand-name">African Literature Hub</span><span className="brand-sub">Grade 8 English</span></span>
         </a>
         <nav className="nav-desktop" aria-label="Page">
           {links.map(([label, href]) => <a key={href} className="nav-link" href={href}>{label}</a>)}

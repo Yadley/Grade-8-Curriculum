@@ -52,7 +52,7 @@ export function Footer() {
           </div>
           <div>
             <span className="footer-label">Advisory Committee</span>
-            <p>Romel A. Pascua, Ph.D. (Chair) · Winicel May C. Ancheta, Ph.D. · Jahnese D. Asuncion, Ph.D. · Jeanette G. Dials, Ed.D.</p>
+            <p>Romel A. Pascua, Ph.D. (Chair) · Jahnese D. Asuncion, Ph.D. · Jeanette G. Dials, Ed.D. · Gerry Abad, PhD. · Winicel May C. Ancheta, Ph.D. (Presiding Chair)</p>
           </div>
           <div>
             <span className="footer-label">Compliance & Rights</span>

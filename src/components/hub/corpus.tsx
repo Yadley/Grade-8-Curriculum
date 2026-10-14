@@ -33,7 +33,7 @@ export function Corpus() {
             </span>
             <p className="kicker">The Shelf</p>
           </div>
-          <p>Drag sideways on a phone. On a larger screen the books drift — pause by hovering.</p>
+          <p>Drag sideways on a phone. On a larger screen the books drift, pause by hovering.</p>
         </div>
         <div className="rail-window" data-lenis-prevent-touch>
           <div className="marquee-track">
@@ -153,7 +153,7 @@ export function Corpus() {
             The cards use a mix of original visual labels and supplied book or collection-cover
             imagery; none reproduces the literary text itself. Years shown follow the thesis
             inventory. Before teaching, confirm each title, text version, and publication date
-            against the authorized edition and bibliography—particularly where the thesis draft
+            against the authorized edition and bibliography, particularly where the thesis draft
             records conflicting dates.
           </span>
         </aside>

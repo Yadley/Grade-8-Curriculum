@@ -92,9 +92,10 @@ export const organizer = [
 
 export const committee = [
   { name: "Romel A. Pascua, Ph.D.", role: "Advisory Committee Chair" },
-  { name: "Winicel May C. Ancheta, Ph.D.", role: "Member, Advisory Committee" },
   { name: "Jahnese D. Asuncion, Ph.D.", role: "Member, Advisory Committee" },
   { name: "Jeanette G. Dials, Ed.D.", role: "Member, Advisory Committee" },
+  { name: "Gerry Abad, PhD.", role: "Member, Advisory Committee" },
+  { name: "Winicel May C. Ancheta, Ph.D.", role: "Presiding Chair" },
 ];
 
 export const roles = [

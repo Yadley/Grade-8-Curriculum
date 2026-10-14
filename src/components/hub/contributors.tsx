@@ -34,16 +34,6 @@ const people: Contributor[] = [
     color: "#16845B",
   },
   {
-    name: "Winicel May C. Ancheta, Ph.D.",
-    role: "Member, Advisory Committee",
-    initials: "WA",
-    image: "/images/Winicel May Ancheta.jpg",
-    kind: "Committee Member",
-    tagline: "Literary Pedagogy & Reading Lenses",
-    shape: "/images/Shapes/African Shape (3).svg",
-    color: "#F2C94C",
-  },
-  {
     name: "Jahnese D. Asuncion, Ph.D.",
     role: "Member, Advisory Committee",
     initials: "JA",
@@ -64,15 +54,24 @@ const people: Contributor[] = [
     color: "#C44B2E",
   },
   {
-    name: "Mariano Marcos State University",
-    role: "Graduate School · Laoag City, Ilocos Norte, Philippines",
-    initials: "MMSU",
-    image: "/images/mmsu-logo.png",
-    kind: "Academic Home",
-    tagline: "Center of Excellence in Teacher Education",
-    isInstitution: true,
-    shape: "/images/Shapes/Africa.svg",
-    color: "#123F2B",
+    name: "Gerry Abad, PhD.",
+    role: "Member, Advisory Committee",
+    initials: "GA",
+    image: "/images/Dr. Abad.jpg",
+    kind: "Committee Member",
+    tagline: "Curriculum Evaluation & Educational Research",
+    shape: "/images/Shapes/African Shape (2).svg",
+    color: "#16845B",
+  },
+  {
+    name: "Winicel May C. Ancheta, Ph.D.",
+    role: "Presiding Chair",
+    initials: "WA",
+    image: "/images/Winicel May Ancheta.jpg",
+    kind: "Presiding Chair",
+    tagline: "Literary Pedagogy & Reading Lenses",
+    shape: "/images/Shapes/African Shape (3).svg",
+    color: "#F2C94C",
   },
 ];
 
@@ -172,13 +171,13 @@ export function Contributors() {
         <div className="contributors-footer-banner">
           <div className="banner-left">
             <span className="banner-icon-badge" aria-hidden="true">
-              <img src="/images/Shapes/Africa.svg" alt="" />
+              <img src="/images/mmsu-logo.png" alt="" style={{ width: 44, height: 44, objectFit: "contain" }} />
             </span>
             <div>
-              <strong>Academic Partnership · Division of Laoag City</strong>
+              <strong>Academic Partnership · Mariano Marcos State University Graduate School</strong>
               <p>
                 Developed under the supervision of the MMSU Graduate School in dialogue with
-                secondary English educators across the Ilocos Norte region.
+                secondary English educators across the Division of Laoag City and the Ilocos Norte region.
               </p>
             </div>
           </div>

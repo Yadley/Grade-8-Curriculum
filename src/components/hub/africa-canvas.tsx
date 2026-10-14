@@ -11,9 +11,9 @@ interface SceneItem {
 
 const initialScenes: SceneItem[] = [
   { id: "art-1", file: "Africa (1).jpg", label: "Land", alt: "African visual study image one, supplied for the literature hub", quote: "The soil remembers what textbooks compress.", originalIndex: 1 },
-  { id: "art-2", file: "Africa (2).jpg", label: "Colour", alt: "African visual study image two, supplied for the literature hub", quote: "Textile, ochre, indigo — living visual syntax.", originalIndex: 2 },
+  { id: "art-2", file: "Africa (2).jpg", label: "Colour", alt: "African visual study image two, supplied for the literature hub", quote: "Textile, ochre, indigo: living visual syntax.", originalIndex: 2 },
   { id: "art-3", file: "Africa (3).jpg", label: "Memory", alt: "African visual study image three, supplied for the literature hub", quote: "Oral inheritance carried across generations.", originalIndex: 3 },
-  { id: "art-4", file: "Africa (4).jpg", label: "Making", alt: "African visual study image four, supplied for the literature hub", quote: "Craft as philosophical inquiry and community work.", originalIndex: 4 },
+  { id: "art-4", file: "Africa (4).jpg", label: "Creativity", alt: "African visual study image four, supplied for the literature hub", quote: "Craft as philosophical inquiry and community work.", originalIndex: 4 },
   { id: "art-5", file: "Africa (5).jpg", label: "Rhythm", alt: "African visual study image five, supplied for the literature hub", quote: "Polyphonic cadences in prose, poetry, and song.", originalIndex: 5 },
   { id: "art-6", file: "Africa (6).jpg", label: "Tomorrow", alt: "African visual study image six, supplied for the literature hub", quote: "Afrofuturist imagination and sovereign futures.", originalIndex: 6 },
 ];
@@ -254,7 +254,7 @@ export function AfricaCanvas() {
               <span className="title-row-two"><em>Single Story.</em></span>
             </h2>
             <p>
-              Colour. Place. Memory. Making. Drag any piece across the canvas or drop over another
+              Colour. Place. Memory. Creativity. Drag any piece across the canvas or drop over another
               slot to curate your own perspective.
             </p>
 

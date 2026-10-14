@@ -140,7 +140,7 @@ export function Toolkit() {
                 “Appreciate literature as a means of understanding the human being and the forces he or she needs to contend with.”
               </blockquote>
               <cite className="toolkit-hero-author">
-                — DepEd Secretary Sonny Angara
+                DepEd Secretary Sonny Angara
               </cite>
             </div>
           </div>
@@ -198,7 +198,7 @@ export function Toolkit() {
           <div className="clock-timeline-header">
             <div>
               <span className="timeline-kicker">Lesson Progression</span>
-              <strong>Active: Stage {activeIndex + 1} — {activeStep.title}</strong>
+              <strong>Active: Stage {activeIndex + 1}: {activeStep.title}</strong>
             </div>
             <div className="timeline-meta-right">
               <span className="timeline-time-badge">

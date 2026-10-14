@@ -398,11 +398,11 @@ export function Study() {
                 ))}
                 <span className="rating-guidance-text">
                   {rating === 0 && "Select a star rating"}
-                  {rating === 1 && "1 — Hard to fit in class"}
-                  {rating === 2 && "2 — Needs heavy adjustment"}
-                  {rating === 3 && "3 — Moderate classroom fit"}
-                  {rating === 4 && "4 — Very effective with learners"}
-                  {rating === 5 && "5 — Ready to teach on Monday!"}
+                  {rating === 1 && "1: Hard to fit in class"}
+                  {rating === 2 && "2: Needs heavy adjustment"}
+                  {rating === 3 && "3: Moderate classroom fit"}
+                  {rating === 4 && "4: Very effective with learners"}
+                  {rating === 5 && "5: Ready to teach on Monday!"}
                 </span>
               </div>
             </fieldset>
