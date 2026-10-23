@@ -2917,6 +2917,19 @@
   align-items: stretch;
   gap: clamp(1rem, 2vw, 1.6rem);
 }
+@media (min-width: 901px) {
+  .contributors-six-grid > .contributor-card-v2:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .contributors-six-grid > .contributor-card-v2:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
 .contributor-card-v2 {
   display: flex;
   flex-direction: column;

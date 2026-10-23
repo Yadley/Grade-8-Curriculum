@@ -62,7 +62,7 @@ export function teacherPack() {
     "5 + 8 + 12 + 10 + 8 + 7 = 50 minutes. This is a flexible planning example, not a required sequence; adjust it to the class period, selected work, and learners.",
     ...clock.map((step) => `${step.mins} · ${step.title} · ${step.model}\n${step.body}`),
     "",
-    "WORKED BRIDGE — HITTING BUDAPEST",
+    "WORKED BRIDGE: HITTING BUDAPEST",
     "In the text: children cross into a suburb and take guavas.",
     "Near us: young people move between places that do not share the same ease.",
     "Keep Bulawayo’s city specific. Guava can be the point of contact; the history is not interchangeable.",
@@ -94,7 +94,7 @@ export function printPack() {
     .replaceAll("&", "&")
     .replaceAll("<", "<")
     .replaceAll(">", ">");
-  popup.document.write(`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>African Literature Hub — teacher pack</title>
+  popup.document.write(`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>African Literature Hub: Teacher Pack</title>
     <style>
       body { font: 16px/1.5 Georgia, serif; color: #1c1917; margin: 2rem; }
       h1 { font-size: 1.6rem; }

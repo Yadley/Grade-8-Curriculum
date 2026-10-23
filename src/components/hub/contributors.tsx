@@ -73,6 +73,16 @@ const people: Contributor[] = [
     shape: "/images/Shapes/African Shape (3).svg",
     color: "#F2C94C",
   },
+  {
+    name: "Dr. Jay-Ar A. Cristobal",
+    role: "Expert Validator · Faculty, Mariano Marcos State University",
+    initials: "JC",
+    image: "/images/Jay-Ar.jpg",
+    kind: "Expert Validator",
+    tagline: "Research Instrument Evaluation & Validation",
+    shape: "/images/Shapes/African Shape (2).svg",
+    color: "#16845B",
+  },
 ];
 
 export function Contributors() {
@@ -109,13 +119,13 @@ export function Contributors() {
             Research Is Human Work.
           </h2>
           <p className="lede">
-            Meet the researcher, advisory committee, and university leadership supporting this
+            Meet the researcher, advisory committee, expert validator, and university leadership supporting this
             supplementary resource hub. A balanced team bridging academic rigor, classroom reality,
             and cultural integrity.
           </p>
         </div>
 
-        {/* Immaculate 6-Card Grid: 3 Cards × 2 Rows on Desktop, Symmetrically Balanced */}
+        {/* 7-Card Grid: Symmetrically Balanced on Desktop, Tablet, and Mobile */}
         <div className="contributors-six-grid" aria-label="Researchers and academic institution">
           {people.map((person, index) => (
             <article
@@ -131,6 +141,7 @@ export function Contributors() {
                 {index === 3 && <AfroChevron color="#16845B" size={20} />}
                 {index === 4 && <AfroTriangle color="#C44B2E" size={20} rotation={-45} />}
                 {index === 5 && <AfroSemiCircle color="#F2C94C" size={24} rotation={90} />}
+                {index === 6 && <AfroRectangle color="#16845B" width={24} height={15} />}
               </div>
 
               <div

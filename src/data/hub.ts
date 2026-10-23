@@ -87,7 +87,7 @@ export const clock = [
 export const organizer = [
   { text: "Evidence From the Literary Text", near: "What does the detail show about the speaker, character, setting, or conflict?" },
   { text: "Context Needed to Interpret It", near: "What reliable background helps explain this detail without stereotyping a whole country or continent?" },
-  { text: "A Careful Connection", near: "What might learners recognize from their own context—and what historical or cultural differences must remain clear?" },
+  { text: "A Careful Connection", near: "What might learners recognize from their own context, and what historical or cultural differences must remain clear?" },
 ];
 
 export const committee = [
