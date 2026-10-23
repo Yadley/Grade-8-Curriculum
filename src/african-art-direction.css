@@ -2917,18 +2917,77 @@
   align-items: stretch;
   gap: clamp(1rem, 2vw, 1.6rem);
 }
+/* ── Presiding Chair Wide Layout (Horizontal 2-Column: Portrait on Left, Info on Right) ── */
 @media (min-width: 901px) {
-  .contributors-six-grid > .contributor-card-v2:last-child:nth-child(3n + 1) {
-    grid-column: 2;
+  .contributor-card-v2.contributor-card-wide {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: minmax(240px, 36%) minmax(0, 64%);
+    align-items: stretch;
+  }
+  .contributor-card-v2.contributor-card-wide .contributor-visual-frame {
+    height: 100%;
+    min-height: 280px;
+    aspect-ratio: auto;
+  }
+  .contributor-card-v2.contributor-card-wide .person-portrait-img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
+  }
+  .contributor-card-v2.contributor-card-wide .contributor-copy-v2 {
+    padding: 1.6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
+
 @media (min-width: 601px) and (max-width: 900px) {
-  .contributors-six-grid > .contributor-card-v2:last-child:nth-child(2n + 1) {
-    grid-column: 1 / -1;
-    max-width: 420px;
-    width: 100%;
-    margin-inline: auto;
+  .contributor-card-v2.contributor-card-wide {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: minmax(220px, 38%) minmax(0, 62%);
+    align-items: stretch;
   }
+  .contributor-card-v2.contributor-card-wide .contributor-visual-frame {
+    height: 100%;
+    min-height: 260px;
+    aspect-ratio: auto;
+  }
+  .contributor-card-v2.contributor-card-wide .person-portrait-img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
+  }
+  .contributor-card-v2.contributor-card-wide .contributor-copy-v2 {
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contributor-card-v2.contributor-card-wide {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+  }
+  .contributor-card-v2.contributor-card-wide .contributor-visual-frame {
+    height: 250px;
+    aspect-ratio: 4 / 3.4;
+  }
+}
+
+.contributor-bio-text {
+  margin: 0.45rem 0 0.85rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-ink);
+  opacity: 0.9;
 }
 .contributor-card-v2 {
   display: flex;

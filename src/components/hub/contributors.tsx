@@ -10,6 +10,8 @@ type Contributor = {
   isInstitution?: boolean;
   shape: string;
   color: string;
+  isWide?: boolean;
+  bio?: string;
 };
 
 const people: Contributor[] = [
@@ -64,16 +66,6 @@ const people: Contributor[] = [
     color: "#16845B",
   },
   {
-    name: "Winicel May C. Ancheta, Ph.D.",
-    role: "Presiding Chair",
-    initials: "WA",
-    image: "/images/Winicel May Ancheta.jpg",
-    kind: "Presiding Chair",
-    tagline: "Literary Pedagogy & Reading Lenses",
-    shape: "/images/Shapes/African Shape (3).svg",
-    color: "#F2C94C",
-  },
-  {
     name: "Dr. Jay-Ar A. Cristobal",
     role: "Expert Validator · Faculty, Mariano Marcos State University",
     initials: "JC",
@@ -82,6 +74,18 @@ const people: Contributor[] = [
     tagline: "Research Instrument Evaluation & Validation",
     shape: "/images/Shapes/African Shape (2).svg",
     color: "#16845B",
+  },
+  {
+    name: "Winicel May C. Ancheta, Ph.D.",
+    role: "Presiding Chair",
+    initials: "WA",
+    image: "/images/Winicel May Ancheta.jpg",
+    kind: "Presiding Chair",
+    tagline: "Literary Pedagogy & Reading Lenses",
+    shape: "/images/Shapes/African Shape (3).svg",
+    color: "#F2C94C",
+    isWide: true,
+    bio: "Presiding over curriculum advisory proceedings, providing leadership on literary pedagogy, and guiding evaluative alignment across all supplementary instructional modules.",
   },
 ];
 
@@ -130,7 +134,7 @@ export function Contributors() {
           {people.map((person, index) => (
             <article
               key={person.name}
-              className={`contributor-card-v2 ${person.isInstitution ? "is-institution-card" : ""}`}
+              className={`contributor-card-v2 ${person.isWide ? "contributor-card-wide" : ""} ${person.isInstitution ? "is-institution-card" : ""}`}
               style={{ "--card-accent": person.color } as React.CSSProperties}
             >
               {/* Geometric Corner Notch Accent */}
@@ -140,8 +144,8 @@ export function Contributors() {
                 {index === 2 && <AfroRectangle color="#F2C94C" width={24} height={15} />}
                 {index === 3 && <AfroChevron color="#16845B" size={20} />}
                 {index === 4 && <AfroTriangle color="#C44B2E" size={20} rotation={-45} />}
-                {index === 5 && <AfroSemiCircle color="#F2C94C" size={24} rotation={90} />}
-                {index === 6 && <AfroRectangle color="#16845B" width={24} height={15} />}
+                {index === 5 && <AfroRectangle color="#16845B" width={24} height={15} />}
+                {index === 6 && <AfroSemiCircle color="#F2C94C" size={24} rotation={90} />}
               </div>
 
               <div
@@ -165,7 +169,13 @@ export function Contributors() {
 
               <div className="contributor-copy-v2">
                 <div className="contributor-kind-row">
-                  <span className="contributor-kind-badge" style={{ backgroundColor: person.color }}>
+                  <span
+                    className="contributor-kind-badge"
+                    style={{
+                      backgroundColor: person.color,
+                      color: person.color === "#F2C94C" ? "#123F2B" : "#ffffff",
+                    }}
+                  >
                     {person.kind}
                   </span>
                   <span className="contributor-card-index">0{index + 1}</span>
@@ -173,6 +183,7 @@ export function Contributors() {
 
                 <h3>{person.name}</h3>
                 <p className="contributor-role-text">{person.role}</p>
+                {person.bio && <p className="contributor-bio-text">{person.bio}</p>}
                 <p className="contributor-tagline-text">{person.tagline}</p>
               </div>
             </article>
