@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { pillars } from "@/data/hub";
-import { AfroSemiCircle, AfroTriangle } from "@/components/hub/afro-shapes";
+import { AfroSemiCircle } from "@/components/hub/afro-shapes";
 
 const pillarShapes = [
   {
