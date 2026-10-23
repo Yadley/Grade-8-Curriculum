@@ -46,7 +46,7 @@ const people: Contributor[] = [
     color: "#16845B",
   },
   {
-    name: "Jeanette G. Dials, Ed.D.",
+    name: "Professor Jeanette G. Dials, Ed.D.",
     role: "Member, Advisory Committee",
     initials: "JD",
     image: "/images/Jeanette Dials.jpg",
@@ -67,7 +67,7 @@ const people: Contributor[] = [
   },
   {
     name: "Dr. Jay-Ar A. Cristobal",
-    role: "Expert Validator · Faculty, Mariano Marcos State University",
+    role: "Expert Validator",
     initials: "JC",
     image: "/images/Jay-Ar.jpg",
     kind: "Expert Validator",
